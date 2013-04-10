@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Concept">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="about" type="xs:string"/>
+        <xs:element ref="prefTerm" maxOccurs="unbounded"/>
+        <xs:element name="altTerm" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="altLabel"/>
+              <xs:element name="typeOfLabel" type="xs:string" minOccurs="0"/>
+              <xs:element name="source" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="lang" type="xs:string"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="hiddenLabel" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:simpleType>
+            <xs:restriction base="xs:string"/>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="notation" type="xs:string" minOccurs="0"/>
+        <xs:element name="inScheme" type="xs:string"/>
+        <xs:element name="memberOfCollection" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:simpleType>
+            <xs:restriction base="xs:string"/>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="broader" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:simpleType>
+            <xs:restriction base="xs:string"/>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="narrower" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:simpleType>
+            <xs:restriction base="xs:string"/>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="use" type="xs:string" minOccurs="0"/>
+        <xs:element name="useFor" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:simpleType>
+            <xs:restriction base="xs:string"/>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="relationship" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="related" type="xs:string"/>
+              <xs:element name="typeOfRelationship" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="equivRelationship" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="equivConcept"/>
+              <xs:element name="mappingRelation" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="definition" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:simpleType>
+            <xs:restriction base="xs:string"/>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="depiction" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:simpleType>
+            <xs:restriction base="xs:string"/>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="subjectIndicator" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:simpleType>
+            <xs:restriction base="xs:string"/>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="note" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="text"/>
+              <xs:element name="editor" type="xs:string" minOccurs="0"/>
+              <xs:element name="edited" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="typeOfNote" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="creation" minOccurs="0"/>
+        <xs:element name="status" type="xs:string" minOccurs="0"/>
+        <xs:element name="modified" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:simpleType>
+            <xs:restriction base="xs:string"/>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="altLabel">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string"></xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="altTerm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="altLabel"/>
+        <xs:element name="typeOfLabel" type="xs:string" minOccurs="0"/>
+        <xs:element name="source" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="broader">
+    <xs:simpleType>
+      <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="creation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="source" type="xs:string"/>
+        <xs:element name="identifier" type="xs:string"/>
+        <xs:element name="creator" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:simpleType>
+            <xs:restriction base="xs:string"/>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="created" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="creator">
+    <xs:simpleType>
+      <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="definition">
+    <xs:simpleType>
+      <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="depiction">
+    <xs:simpleType>
+      <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="equivConcept">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="equivID" type="xs:string"/>
+        <xs:element name="equivLabel" type="xs:string"/>
+        <xs:element name="equivSource" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="equivRelationship">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="equivConcept"/>
+        <xs:element name="mappingRelation" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="hiddenLabel">
+    <xs:simpleType>
+      <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="memberOfCollection">
+    <xs:simpleType>
+      <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="modified">
+    <xs:simpleType>
+      <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="museumvok">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Concept" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="narrower">
+    <xs:simpleType>
+      <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="note">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="text"/>
+        <xs:element name="editor" type="xs:string" minOccurs="0"/>
+        <xs:element name="edited" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="type" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="prefLabel">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string"></xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="prefTerm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="prefLabel"/>
+        <xs:element name="source" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="lang" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="relationship">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="related" type="xs:string"/>
+        <xs:element name="typeOfRelationship" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="subjectIndicator">
+    <xs:simpleType>
+      <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="text">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="typeOfText" type="xs:string" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="useFor">
+    <xs:simpleType>
+      <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+  </xs:element>
+</xs:schema>
+
