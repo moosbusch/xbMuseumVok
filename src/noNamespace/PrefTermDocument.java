@@ -17,7 +17,7 @@ package noNamespace;
 public interface PrefTermDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(PrefTermDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s32C078CD38F534DEA8974BB26E2F8EAC").resolveHandle("prefterm10a8doctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(PrefTermDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("prefterm10a8doctype");
     
     /**
      * Gets the "prefTerm" element
@@ -42,22 +42,27 @@ public interface PrefTermDocument extends org.apache.xmlbeans.XmlObject
     public interface PrefTerm extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(PrefTerm.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s32C078CD38F534DEA8974BB26E2F8EAC").resolveHandle("prefterm6a0delemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(PrefTerm.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("prefterm6a0delemtype");
         
         /**
          * Gets the "prefLabel" element
          */
-        noNamespace.PrefLabelDocument.PrefLabel getPrefLabel();
+        java.lang.String getPrefLabel();
+        
+        /**
+         * Gets (as xml) the "prefLabel" element
+         */
+        org.apache.xmlbeans.XmlString xgetPrefLabel();
         
         /**
          * Sets the "prefLabel" element
          */
-        void setPrefLabel(noNamespace.PrefLabelDocument.PrefLabel prefLabel);
+        void setPrefLabel(java.lang.String prefLabel);
         
         /**
-         * Appends and returns a new empty "prefLabel" element
+         * Sets (as xml) the "prefLabel" element
          */
-        noNamespace.PrefLabelDocument.PrefLabel addNewPrefLabel();
+        void xsetPrefLabel(org.apache.xmlbeans.XmlString prefLabel);
         
         /**
          * Gets the "source" element
@@ -100,11 +105,6 @@ public interface PrefTermDocument extends org.apache.xmlbeans.XmlObject
         org.apache.xmlbeans.XmlString xgetLang();
         
         /**
-         * True if has "lang" attribute
-         */
-        boolean isSetLang();
-        
-        /**
          * Sets the "lang" attribute
          */
         void setLang(java.lang.String lang);
@@ -113,11 +113,6 @@ public interface PrefTermDocument extends org.apache.xmlbeans.XmlObject
          * Sets (as xml) the "lang" attribute
          */
         void xsetLang(org.apache.xmlbeans.XmlString lang);
-        
-        /**
-         * Unsets the "lang" attribute
-         */
-        void unsetLang();
         
         /**
          * A factory class with static methods for creating instances

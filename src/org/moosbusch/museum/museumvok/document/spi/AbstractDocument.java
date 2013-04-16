@@ -4,6 +4,7 @@
  */
 package org.moosbusch.museum.museumvok.document.spi;
 
+import com.google.inject.Inject;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -16,6 +17,7 @@ import java.net.URL;
 import noNamespace.MuseumvokDocument;
 import org.apache.xmlbeans.XmlException;
 import org.moosbusch.museum.museumvok.document.Document;
+import org.moosbusch.museum.museumvok.inject.annotation.Language;
 import org.moosbusch.museum.museumvok.util.MuseumVokObjectFactory;
 
 /**
@@ -25,6 +27,9 @@ import org.moosbusch.museum.museumvok.util.MuseumVokObjectFactory;
 public abstract class AbstractDocument implements Document {
 
     private MuseumvokDocument museumVokDocument;
+    @Inject
+    @Language
+    private String language;
 
     public AbstractDocument() {
         init();
@@ -87,6 +92,17 @@ public abstract class AbstractDocument implements Document {
                 getMuseumVokDocument(), output);
         output.flush();
         output.close();
+    }
+
+    @Override
+    public String getLanguage() {
+        return language;
+    }
+
+    @Override
+    @Inject
+    public void setLanguage(@Language String language) {
+        this.language = language;
     }
 
 }

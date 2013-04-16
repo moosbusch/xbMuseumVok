@@ -17,7 +17,7 @@ package noNamespace;
 public interface AltTermDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(AltTermDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s32C078CD38F534DEA8974BB26E2F8EAC").resolveHandle("altterm631cdoctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(AltTermDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("altterm631cdoctype");
     
     /**
      * Gets the "altTerm" element
@@ -42,22 +42,27 @@ public interface AltTermDocument extends org.apache.xmlbeans.XmlObject
     public interface AltTerm extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(AltTerm.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s32C078CD38F534DEA8974BB26E2F8EAC").resolveHandle("alttermdc0delemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(AltTerm.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("alttermdc0delemtype");
         
         /**
          * Gets the "altLabel" element
          */
-        noNamespace.AltLabelDocument.AltLabel getAltLabel();
+        java.lang.String getAltLabel();
+        
+        /**
+         * Gets (as xml) the "altLabel" element
+         */
+        org.apache.xmlbeans.XmlString xgetAltLabel();
         
         /**
          * Sets the "altLabel" element
          */
-        void setAltLabel(noNamespace.AltLabelDocument.AltLabel altLabel);
+        void setAltLabel(java.lang.String altLabel);
         
         /**
-         * Appends and returns a new empty "altLabel" element
+         * Sets (as xml) the "altLabel" element
          */
-        noNamespace.AltLabelDocument.AltLabel addNewAltLabel();
+        void xsetAltLabel(org.apache.xmlbeans.XmlString altLabel);
         
         /**
          * Gets the "typeOfLabel" element
@@ -118,6 +123,26 @@ public interface AltTermDocument extends org.apache.xmlbeans.XmlObject
          * Unsets the "source" element
          */
         void unsetSource();
+        
+        /**
+         * Gets the "lang" attribute
+         */
+        java.lang.String getLang();
+        
+        /**
+         * Gets (as xml) the "lang" attribute
+         */
+        org.apache.xmlbeans.XmlString xgetLang();
+        
+        /**
+         * Sets the "lang" attribute
+         */
+        void setLang(java.lang.String lang);
+        
+        /**
+         * Sets (as xml) the "lang" attribute
+         */
+        void xsetLang(org.apache.xmlbeans.XmlString lang);
         
         /**
          * A factory class with static methods for creating instances

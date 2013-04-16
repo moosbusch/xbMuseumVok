@@ -17,7 +17,7 @@ package noNamespace;
 public interface EquivConceptDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(EquivConceptDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s32C078CD38F534DEA8974BB26E2F8EAC").resolveHandle("equivconcept3c4bdoctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(EquivConceptDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("equivconcept3c4bdoctype");
     
     /**
      * Gets the "equivConcept" element
@@ -42,7 +42,7 @@ public interface EquivConceptDocument extends org.apache.xmlbeans.XmlObject
     public interface EquivConcept extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(EquivConcept.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s32C078CD38F534DEA8974BB26E2F8EAC").resolveHandle("equivconcept24adelemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(EquivConcept.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("equivconcept24adelemtype");
         
         /**
          * Gets the "equivID" element

@@ -17,7 +17,7 @@ package noNamespace;
 public interface CreationDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(CreationDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s32C078CD38F534DEA8974BB26E2F8EAC").resolveHandle("creationee58doctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(CreationDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("creationee58doctype");
     
     /**
      * Gets the "creation" element
@@ -42,7 +42,7 @@ public interface CreationDocument extends org.apache.xmlbeans.XmlObject
     public interface Creation extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Creation.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s32C078CD38F534DEA8974BB26E2F8EAC").resolveHandle("creationfc0delemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Creation.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("creationfc0delemtype");
         
         /**
          * Gets the "source" element
@@ -216,7 +216,7 @@ public interface CreationDocument extends org.apache.xmlbeans.XmlObject
         public interface Creator extends org.apache.xmlbeans.XmlString
         {
             public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-                org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Creator.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s32C078CD38F534DEA8974BB26E2F8EAC").resolveHandle("creator9ab5elemtype");
+                org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Creator.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("creator9ab5elemtype");
             
             /**
              * A factory class with static methods for creating instances

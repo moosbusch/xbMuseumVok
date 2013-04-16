@@ -17,7 +17,7 @@ package noNamespace;
 public interface NoteDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(NoteDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s32C078CD38F534DEA8974BB26E2F8EAC").resolveHandle("noted3ebdoctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(NoteDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("noted3ebdoctype");
     
     /**
      * Gets the "note" element
@@ -42,7 +42,7 @@ public interface NoteDocument extends org.apache.xmlbeans.XmlObject
     public interface Note extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Note.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s32C078CD38F534DEA8974BB26E2F8EAC").resolveHandle("notef3adelemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Note.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("notef3adelemtype");
         
         /**
          * Gets the "text" element

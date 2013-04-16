@@ -8,44 +8,32 @@ import com.google.inject.AbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Provides;
-import noNamespace.AltLabelDocument;
-import noNamespace.AltLabelDocument.AltLabel;
+import java.util.Locale;
 import noNamespace.AltTermDocument;
 import noNamespace.AltTermDocument.AltTerm;
-import noNamespace.BroaderDocument;
 import noNamespace.ConceptDocument;
 import noNamespace.ConceptDocument.Concept;
-import noNamespace.ConceptDocument.Concept.EquivRelationship;
-import noNamespace.ConceptDocument.Concept.Note;
-import noNamespace.ConceptDocument.Concept.Relationship;
 import noNamespace.CreationDocument;
 import noNamespace.CreationDocument.Creation;
-import noNamespace.CreatorDocument;
-import noNamespace.DefinitionDocument;
-import noNamespace.DepictionDocument;
 import noNamespace.EquivConceptDocument;
 import noNamespace.EquivConceptDocument.EquivConcept;
 import noNamespace.EquivRelationshipDocument;
-import noNamespace.HiddenLabelDocument;
-import noNamespace.MemberOfCollectionDocument;
-import noNamespace.ModifiedDocument;
+import noNamespace.EquivRelationshipDocument.EquivRelationship;
 import noNamespace.MuseumvokDocument;
 import noNamespace.MuseumvokDocument.Museumvok;
-import noNamespace.NarrowerDocument;
 import noNamespace.NoteDocument;
-import noNamespace.PrefLabelDocument;
-import noNamespace.PrefLabelDocument.PrefLabel;
+import noNamespace.NoteDocument.Note;
 import noNamespace.PrefTermDocument;
 import noNamespace.PrefTermDocument.PrefTerm;
 import noNamespace.RelationshipDocument;
-import noNamespace.SubjectIndicatorDocument;
+import noNamespace.RelationshipDocument.Relationship;
 import noNamespace.TextDocument;
 import noNamespace.TextDocument.Text;
-import noNamespace.UseForDocument;
 import org.apache.xmlbeans.XmlObject;
 import org.apache.xmlbeans.impl.xb.xsdschema.NotationDocument;
 import org.moosbusch.museum.museumvok.document.Document;
 import org.moosbusch.museum.museumvok.document.impl.DocumentImpl;
+import org.moosbusch.museum.museumvok.inject.annotation.Language;
 
 /**
  *
@@ -76,6 +64,7 @@ public class MuseumVokModule extends AbstractModule {
 
     @Override
     protected void configure() {
+        binder().bind(String.class).annotatedWith(Language.class).toInstance(Locale.getDefault().toLanguageTag());
     }
 
 //    @Provides
@@ -117,28 +106,6 @@ public class MuseumVokModule extends AbstractModule {
     }
 
     @Provides
-    public noNamespace.ConceptDocument.Concept.AltTerm createConceptAltTerm() {
-        noNamespace.ConceptDocument.Concept.AltTerm result =
-                ConceptDocument.Concept.AltTerm.Factory.newInstance();
-        result = entityCreated(result);
-        return result;
-    }
-
-    @Provides
-    public AltLabelDocument createAltLabelDocument() {
-        AltLabelDocument result = AltLabelDocument.Factory.newInstance();
-        result = entityCreated(result);
-        return result;
-    }
-
-    @Provides
-    public AltLabel createAltLabel() {
-        AltLabel result = AltLabelDocument.AltLabel.Factory.newInstance();
-        result = entityCreated(result);
-        return result;
-    }
-
-    @Provides
     public PrefTermDocument createPrefTermDocument() {
         PrefTermDocument result = PrefTermDocument.Factory.newInstance();
         result = entityCreated(result);
@@ -148,20 +115,6 @@ public class MuseumVokModule extends AbstractModule {
     @Provides
     public PrefTerm createPrefTerm() {
         PrefTerm result = PrefTermDocument.PrefTerm.Factory.newInstance();
-        result = entityCreated(result);
-        return result;
-    }
-
-    @Provides
-    public PrefLabelDocument createPrefLabelDocument() {
-        PrefLabelDocument result = PrefLabelDocument.Factory.newInstance();
-        result = entityCreated(result);
-        return result;
-    }
-
-    @Provides
-    public PrefLabel createPrefLabel() {
-        PrefLabel result = PrefLabelDocument.PrefLabel.Factory.newInstance();
         result = entityCreated(result);
         return result;
     }
@@ -265,78 +218,8 @@ public class MuseumVokModule extends AbstractModule {
     }
 
     @Provides
-    public CreatorDocument createCreatorDocument() {
-        CreatorDocument result = CreatorDocument.Factory.newInstance();
-        result = entityCreated(result);
-        return result;
-    }
-
-    @Provides
-    public BroaderDocument createBroaderDocument() {
-        BroaderDocument result = BroaderDocument.Factory.newInstance();
-        result = entityCreated(result);
-        return result;
-    }
-
-    @Provides
-    public NarrowerDocument createNarrowerDocument() {
-        NarrowerDocument result = NarrowerDocument.Factory.newInstance();
-        result = entityCreated(result);
-        return result;
-    }
-
-    @Provides
     public NotationDocument createNotationDocument() {
         NotationDocument result = NotationDocument.Factory.newInstance();
-        result = entityCreated(result);
-        return result;
-    }
-
-    @Provides
-    public ModifiedDocument createModifiedDocument() {
-        ModifiedDocument result = ModifiedDocument.Factory.newInstance();
-        result = entityCreated(result);
-        return result;
-    }
-
-    @Provides
-    public DepictionDocument createDepictionDocument() {
-        DepictionDocument result = DepictionDocument.Factory.newInstance();
-        result = entityCreated(result);
-        return result;
-    }
-
-    @Provides
-    public DefinitionDocument createDefinitionDocument() {
-        DefinitionDocument result = DefinitionDocument.Factory.newInstance();
-        result = entityCreated(result);
-        return result;
-    }
-
-    @Provides
-    public HiddenLabelDocument createHiddenLabelDocument() {
-        HiddenLabelDocument result = HiddenLabelDocument.Factory.newInstance();
-        result = entityCreated(result);
-        return result;
-    }
-
-    @Provides
-    public MemberOfCollectionDocument createMemberOfCollectionDocument() {
-        MemberOfCollectionDocument result = MemberOfCollectionDocument.Factory.newInstance();
-        result = entityCreated(result);
-        return result;
-    }
-
-    @Provides
-    public UseForDocument createUseForDocument() {
-        UseForDocument result = UseForDocument.Factory.newInstance();
-        result = entityCreated(result);
-        return result;
-    }
-
-    @Provides
-    public SubjectIndicatorDocument createSubjectIndicatorDocument() {
-        SubjectIndicatorDocument result = SubjectIndicatorDocument.Factory.newInstance();
         result = entityCreated(result);
         return result;
     }

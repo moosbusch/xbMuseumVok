@@ -89,17 +89,31 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
         /**
          * Gets the "prefLabel" element
          */
-        public noNamespace.PrefLabelDocument.PrefLabel getPrefLabel()
+        public java.lang.String getPrefLabel()
         {
             synchronized (monitor())
             {
                 check_orphaned();
-                noNamespace.PrefLabelDocument.PrefLabel target = null;
-                target = (noNamespace.PrefLabelDocument.PrefLabel)get_store().find_element_user(PREFLABEL$0, 0);
+                org.apache.xmlbeans.SimpleValue target = null;
+                target = (org.apache.xmlbeans.SimpleValue)get_store().find_element_user(PREFLABEL$0, 0);
                 if (target == null)
                 {
                     return null;
                 }
+                return target.getStringValue();
+            }
+        }
+        
+        /**
+         * Gets (as xml) the "prefLabel" element
+         */
+        public org.apache.xmlbeans.XmlString xgetPrefLabel()
+        {
+            synchronized (monitor())
+            {
+                check_orphaned();
+                org.apache.xmlbeans.XmlString target = null;
+                target = (org.apache.xmlbeans.XmlString)get_store().find_element_user(PREFLABEL$0, 0);
                 return target;
             }
         }
@@ -107,22 +121,36 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
         /**
          * Sets the "prefLabel" element
          */
-        @Inject(optional=true) public void setPrefLabel(noNamespace.PrefLabelDocument.PrefLabel prefLabel)
-        {
-            generatedSetterHelperImpl(prefLabel, PREFLABEL$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
-        }
-        
-        /**
-         * Appends and returns a new empty "prefLabel" element
-         */
-        public noNamespace.PrefLabelDocument.PrefLabel addNewPrefLabel()
+        @Inject(optional=true) public void setPrefLabel(java.lang.String prefLabel)
         {
             synchronized (monitor())
             {
                 check_orphaned();
-                noNamespace.PrefLabelDocument.PrefLabel target = null;
-                target = (noNamespace.PrefLabelDocument.PrefLabel)get_store().add_element_user(PREFLABEL$0);
-                return target;
+                org.apache.xmlbeans.SimpleValue target = null;
+                target = (org.apache.xmlbeans.SimpleValue)get_store().find_element_user(PREFLABEL$0, 0);
+                if (target == null)
+                {
+                    target = (org.apache.xmlbeans.SimpleValue)get_store().add_element_user(PREFLABEL$0);
+                }
+                target.setStringValue(prefLabel);
+            }
+        }
+        
+        /**
+         * Sets (as xml) the "prefLabel" element
+         */
+        public void xsetPrefLabel(org.apache.xmlbeans.XmlString prefLabel)
+        {
+            synchronized (monitor())
+            {
+                check_orphaned();
+                org.apache.xmlbeans.XmlString target = null;
+                target = (org.apache.xmlbeans.XmlString)get_store().find_element_user(PREFLABEL$0, 0);
+                if (target == null)
+                {
+                    target = (org.apache.xmlbeans.XmlString)get_store().add_element_user(PREFLABEL$0);
+                }
+                target.set(prefLabel);
             }
         }
         
@@ -251,18 +279,6 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
         }
         
         /**
-         * True if has "lang" attribute
-         */
-        public boolean isSetLang()
-        {
-            synchronized (monitor())
-            {
-                check_orphaned();
-                return get_store().find_attribute_user(LANG$4) != null;
-            }
-        }
-        
-        /**
          * Sets the "lang" attribute
          */
         @Inject(optional=true) public void setLang(java.lang.String lang)
@@ -295,18 +311,6 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
                     target = (org.apache.xmlbeans.XmlString)get_store().add_attribute_user(LANG$4);
                 }
                 target.set(lang);
-            }
-        }
-        
-        /**
-         * Unsets the "lang" attribute
-         */
-        public void unsetLang()
-        {
-            synchronized (monitor())
-            {
-                check_orphaned();
-                get_store().remove_attribute(LANG$4);
             }
         }
     }

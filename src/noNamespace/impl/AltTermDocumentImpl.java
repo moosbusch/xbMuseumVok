@@ -1,12 +1,13 @@
 /*
  * An XML document type.
  * Localname: altTerm
- * Namespace: 
+ * Namespace:
  * Java type: noNamespace.AltTermDocument
  *
  * Automatically generated - do not modify.
  */
 package noNamespace.impl;  import com.google.inject.Inject;
+
 /**
  * A document containing one altTerm(@) element.
  *
@@ -15,16 +16,16 @@ package noNamespace.impl;  import com.google.inject.Inject;
 public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComplexContentImpl implements noNamespace.AltTermDocument
 {
     private static final long serialVersionUID = 1L;
-    
+
     public AltTermDocumentImpl(org.apache.xmlbeans.SchemaType sType)
     {
         super(sType);
     }
-    
-    private static final javax.xml.namespace.QName ALTTERM$0 = 
+
+    private static final javax.xml.namespace.QName ALTTERM$0 =
         new javax.xml.namespace.QName("", "altTerm");
-    
-    
+
+
     /**
      * Gets the "altTerm" element
      */
@@ -42,7 +43,7 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
             return target;
         }
     }
-    
+
     /**
      * Sets the "altTerm" element
      */
@@ -50,7 +51,7 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
     {
         generatedSetterHelperImpl(altTerm, ALTTERM$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
-    
+
     /**
      * Appends and returns a new empty "altTerm" element
      */
@@ -72,60 +73,90 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
     public static class AltTermImpl extends org.apache.xmlbeans.impl.values.XmlComplexContentImpl implements noNamespace.AltTermDocument.AltTerm
     {
         private static final long serialVersionUID = 1L;
-        
+
         public AltTermImpl(org.apache.xmlbeans.SchemaType sType)
         {
             super(sType);
         }
-        
-        private static final javax.xml.namespace.QName ALTLABEL$0 = 
+
+        private static final javax.xml.namespace.QName ALTLABEL$0 =
             new javax.xml.namespace.QName("", "altLabel");
-        private static final javax.xml.namespace.QName TYPEOFLABEL$2 = 
+        private static final javax.xml.namespace.QName TYPEOFLABEL$2 =
             new javax.xml.namespace.QName("", "typeOfLabel");
-        private static final javax.xml.namespace.QName SOURCE$4 = 
+        private static final javax.xml.namespace.QName SOURCE$4 =
             new javax.xml.namespace.QName("", "source");
-        
-        
+        private static final javax.xml.namespace.QName LANG$6 =
+            new javax.xml.namespace.QName("", "lang");
+
+
         /**
          * Gets the "altLabel" element
          */
-        public noNamespace.AltLabelDocument.AltLabel getAltLabel()
+        public java.lang.String getAltLabel()
         {
             synchronized (monitor())
             {
                 check_orphaned();
-                noNamespace.AltLabelDocument.AltLabel target = null;
-                target = (noNamespace.AltLabelDocument.AltLabel)get_store().find_element_user(ALTLABEL$0, 0);
+                org.apache.xmlbeans.SimpleValue target = null;
+                target = (org.apache.xmlbeans.SimpleValue)get_store().find_element_user(ALTLABEL$0, 0);
                 if (target == null)
                 {
                     return null;
                 }
-                return target;
+                return target.getStringValue();
             }
         }
-        
+
         /**
-         * Sets the "altLabel" element
+         * Gets (as xml) the "altLabel" element
          */
-        @Inject(optional=true) public void setAltLabel(noNamespace.AltLabelDocument.AltLabel altLabel)
-        {
-            generatedSetterHelperImpl(altLabel, ALTLABEL$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
-        }
-        
-        /**
-         * Appends and returns a new empty "altLabel" element
-         */
-        public noNamespace.AltLabelDocument.AltLabel addNewAltLabel()
+        public org.apache.xmlbeans.XmlString xgetAltLabel()
         {
             synchronized (monitor())
             {
                 check_orphaned();
-                noNamespace.AltLabelDocument.AltLabel target = null;
-                target = (noNamespace.AltLabelDocument.AltLabel)get_store().add_element_user(ALTLABEL$0);
+                org.apache.xmlbeans.XmlString target = null;
+                target = (org.apache.xmlbeans.XmlString)get_store().find_element_user(ALTLABEL$0, 0);
                 return target;
             }
         }
-        
+
+        /**
+         * Sets the "altLabel" element
+         */
+        @Inject(optional=true) public void setAltLabel(java.lang.String altLabel)
+        {
+            synchronized (monitor())
+            {
+                check_orphaned();
+                org.apache.xmlbeans.SimpleValue target = null;
+                target = (org.apache.xmlbeans.SimpleValue)get_store().find_element_user(ALTLABEL$0, 0);
+                if (target == null)
+                {
+                    target = (org.apache.xmlbeans.SimpleValue)get_store().add_element_user(ALTLABEL$0);
+                }
+                target.setStringValue(altLabel);
+            }
+        }
+
+        /**
+         * Sets (as xml) the "altLabel" element
+         */
+        public void xsetAltLabel(org.apache.xmlbeans.XmlString altLabel)
+        {
+            synchronized (monitor())
+            {
+                check_orphaned();
+                org.apache.xmlbeans.XmlString target = null;
+                target = (org.apache.xmlbeans.XmlString)get_store().find_element_user(ALTLABEL$0, 0);
+                if (target == null)
+                {
+                    target = (org.apache.xmlbeans.XmlString)get_store().add_element_user(ALTLABEL$0);
+                }
+                target.set(altLabel);
+            }
+        }
+
         /**
          * Gets the "typeOfLabel" element
          */
@@ -143,7 +174,7 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
                 return target.getStringValue();
             }
         }
-        
+
         /**
          * Gets (as xml) the "typeOfLabel" element
          */
@@ -157,7 +188,7 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
                 return target;
             }
         }
-        
+
         /**
          * True if has "typeOfLabel" element
          */
@@ -169,7 +200,7 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
                 return get_store().count_elements(TYPEOFLABEL$2) != 0;
             }
         }
-        
+
         /**
          * Sets the "typeOfLabel" element
          */
@@ -187,7 +218,7 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
                 target.setStringValue(typeOfLabel);
             }
         }
-        
+
         /**
          * Sets (as xml) the "typeOfLabel" element
          */
@@ -205,7 +236,7 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
                 target.set(typeOfLabel);
             }
         }
-        
+
         /**
          * Unsets the "typeOfLabel" element
          */
@@ -217,7 +248,7 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
                 get_store().remove_element(TYPEOFLABEL$2, 0);
             }
         }
-        
+
         /**
          * Gets the "source" element
          */
@@ -235,7 +266,7 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
                 return target.getStringValue();
             }
         }
-        
+
         /**
          * Gets (as xml) the "source" element
          */
@@ -249,7 +280,7 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
                 return target;
             }
         }
-        
+
         /**
          * True if has "source" element
          */
@@ -261,7 +292,7 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
                 return get_store().count_elements(SOURCE$4) != 0;
             }
         }
-        
+
         /**
          * Sets the "source" element
          */
@@ -279,7 +310,7 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
                 target.setStringValue(source);
             }
         }
-        
+
         /**
          * Sets (as xml) the "source" element
          */
@@ -297,7 +328,7 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
                 target.set(source);
             }
         }
-        
+
         /**
          * Unsets the "source" element
          */
@@ -307,6 +338,74 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
             {
                 check_orphaned();
                 get_store().remove_element(SOURCE$4, 0);
+            }
+        }
+
+        /**
+         * Gets the "lang" attribute
+         */
+        public java.lang.String getLang()
+        {
+            synchronized (monitor())
+            {
+                check_orphaned();
+                org.apache.xmlbeans.SimpleValue target = null;
+                target = (org.apache.xmlbeans.SimpleValue)get_store().find_attribute_user(LANG$6);
+                if (target == null)
+                {
+                    return null;
+                }
+                return target.getStringValue();
+            }
+        }
+
+        /**
+         * Gets (as xml) the "lang" attribute
+         */
+        public org.apache.xmlbeans.XmlString xgetLang()
+        {
+            synchronized (monitor())
+            {
+                check_orphaned();
+                org.apache.xmlbeans.XmlString target = null;
+                target = (org.apache.xmlbeans.XmlString)get_store().find_attribute_user(LANG$6);
+                return target;
+            }
+        }
+
+        /**
+         * Sets the "lang" attribute
+         */
+        @Inject(optional=true) public void setLang(java.lang.String lang)
+        {
+            synchronized (monitor())
+            {
+                check_orphaned();
+                org.apache.xmlbeans.SimpleValue target = null;
+                target = (org.apache.xmlbeans.SimpleValue)get_store().find_attribute_user(LANG$6);
+                if (target == null)
+                {
+                    target = (org.apache.xmlbeans.SimpleValue)get_store().add_attribute_user(LANG$6);
+                }
+                target.setStringValue(lang);
+            }
+        }
+
+        /**
+         * Sets (as xml) the "lang" attribute
+         */
+        public void xsetLang(org.apache.xmlbeans.XmlString lang)
+        {
+            synchronized (monitor())
+            {
+                check_orphaned();
+                org.apache.xmlbeans.XmlString target = null;
+                target = (org.apache.xmlbeans.XmlString)get_store().find_attribute_user(LANG$6);
+                if (target == null)
+                {
+                    target = (org.apache.xmlbeans.XmlString)get_store().add_attribute_user(LANG$6);
+                }
+                target.set(lang);
             }
         }
     }

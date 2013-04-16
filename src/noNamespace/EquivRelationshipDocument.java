@@ -17,7 +17,7 @@ package noNamespace;
 public interface EquivRelationshipDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(EquivRelationshipDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s32C078CD38F534DEA8974BB26E2F8EAC").resolveHandle("equivrelationship6a35doctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(EquivRelationshipDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("equivrelationship6a35doctype");
     
     /**
      * Gets the "equivRelationship" element
@@ -42,7 +42,7 @@ public interface EquivRelationshipDocument extends org.apache.xmlbeans.XmlObject
     public interface EquivRelationship extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(EquivRelationship.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s32C078CD38F534DEA8974BB26E2F8EAC").resolveHandle("equivrelationshipe93felemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(EquivRelationship.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("equivrelationshipe93felemtype");
         
         /**
          * Gets the "equivConcept" element

@@ -9,6 +9,7 @@ import com.google.inject.Injector;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.Locale;
 import noNamespace.MuseumvokDocument;
 import org.apache.xmlbeans.ObjectFactory;
 import org.apache.xmlbeans.XmlException;
@@ -59,6 +60,18 @@ public class MuseumVokObjectFactory implements ObjectFactory {
         return MuseumVokFactoryHolder.INSTANCE;
     }
 
+    public String getRFC3066Locale(Locale locale) {
+        return getRFC3066Locale(locale.toLanguageTag());
+    }
+
+    public String getRFC3066Locale(String localeCode) {
+        if (localeCode.contains("_")) {
+            return localeCode.replace('_', '-');
+        }
+
+        return localeCode;
+    }
+
     private Injector createMuseumVokInjector() {
         return Guice.createInjector(new MuseumVokModule());
     }
@@ -86,7 +99,7 @@ public class MuseumVokObjectFactory implements ObjectFactory {
     }
 
     @Override
-    public Object createObject(Class type) {
+    public final Object createObject(Class type) {
         return createMuseumVokObject(type);
     }
 
