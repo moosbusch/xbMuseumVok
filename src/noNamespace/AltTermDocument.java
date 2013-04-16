@@ -17,7 +17,7 @@ package noNamespace;
 public interface AltTermDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(AltTermDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("altterm631cdoctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(AltTermDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sA75ECD0220A9C22DFDD0E419E7724324").resolveHandle("altterm631cdoctype");
     
     /**
      * Gets the "altTerm" element
@@ -42,7 +42,7 @@ public interface AltTermDocument extends org.apache.xmlbeans.XmlObject
     public interface AltTerm extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(AltTerm.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("alttermdc0delemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(AltTerm.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sA75ECD0220A9C22DFDD0E419E7724324").resolveHandle("alttermdc0delemtype");
         
         /**
          * Gets the "altLabel" element

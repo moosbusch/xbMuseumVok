@@ -17,7 +17,7 @@ package noNamespace;
 public interface MuseumvokDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MuseumvokDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("museumvok5d27doctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MuseumvokDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sA75ECD0220A9C22DFDD0E419E7724324").resolveHandle("museumvok5d27doctype");
     
     /**
      * Gets the "museumvok" element
@@ -42,7 +42,7 @@ public interface MuseumvokDocument extends org.apache.xmlbeans.XmlObject
     public interface Museumvok extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Museumvok.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("museumvok7f23elemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Museumvok.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sA75ECD0220A9C22DFDD0E419E7724324").resolveHandle("museumvok7f23elemtype");
         
         /**
          * Gets a List of "Concept" elements

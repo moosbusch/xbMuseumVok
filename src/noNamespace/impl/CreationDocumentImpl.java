@@ -386,24 +386,6 @@ public class CreationDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
         }
         
         /**
-         * Tests for nil ith "creator" element
-         */
-        public boolean isNilCreatorArray(int i)
-        {
-            synchronized (monitor())
-            {
-                check_orphaned();
-                noNamespace.CreationDocument.Creation.Creator target = null;
-                target = (noNamespace.CreationDocument.Creation.Creator)get_store().find_element_user(CREATOR$4, i);
-                if (target == null)
-                {
-                    throw new IndexOutOfBoundsException();
-                }
-                return target.isNil();
-            }
-        }
-        
-        /**
          * Returns number of "creator" element
          */
         public int sizeOfCreatorArray()
@@ -472,24 +454,6 @@ public class CreationDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
                     throw new IndexOutOfBoundsException();
                 }
                 target.set(creator);
-            }
-        }
-        
-        /**
-         * Nils the ith "creator" element
-         */
-        @Inject(optional=true) public void setNilCreatorArray(int i)
-        {
-            synchronized (monitor())
-            {
-                check_orphaned();
-                noNamespace.CreationDocument.Creation.Creator target = null;
-                target = (noNamespace.CreationDocument.Creation.Creator)get_store().find_element_user(CREATOR$4, i);
-                if (target == null)
-                {
-                    throw new IndexOutOfBoundsException();
-                }
-                target.setNil();
             }
         }
         

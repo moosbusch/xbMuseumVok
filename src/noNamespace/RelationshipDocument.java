@@ -17,7 +17,7 @@ package noNamespace;
 public interface RelationshipDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(RelationshipDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("relationship9131doctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(RelationshipDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sA75ECD0220A9C22DFDD0E419E7724324").resolveHandle("relationship9131doctype");
     
     /**
      * Gets the "relationship" element
@@ -42,7 +42,7 @@ public interface RelationshipDocument extends org.apache.xmlbeans.XmlObject
     public interface Relationship extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Relationship.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("relationshipfbedelemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Relationship.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sA75ECD0220A9C22DFDD0E419E7724324").resolveHandle("relationshipfbedelemtype");
         
         /**
          * Gets the "related" element

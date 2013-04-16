@@ -17,7 +17,7 @@ package noNamespace;
 public interface TextDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(TextDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("text6926doctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(TextDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sA75ECD0220A9C22DFDD0E419E7724324").resolveHandle("text6926doctype");
     
     /**
      * Gets the "text" element
@@ -42,27 +42,117 @@ public interface TextDocument extends org.apache.xmlbeans.XmlObject
     public interface Text extends org.apache.xmlbeans.XmlString
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Text.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("textab4delemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Text.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sA75ECD0220A9C22DFDD0E419E7724324").resolveHandle("textab4delemtype");
         
         /**
          * Gets the "typeOfText" attribute
          */
-        java.lang.String getTypeOfText();
+        noNamespace.TextDocument.Text.TypeOfText.Enum getTypeOfText();
         
         /**
          * Gets (as xml) the "typeOfText" attribute
          */
-        org.apache.xmlbeans.XmlString xgetTypeOfText();
+        noNamespace.TextDocument.Text.TypeOfText xgetTypeOfText();
         
         /**
          * Sets the "typeOfText" attribute
          */
-        void setTypeOfText(java.lang.String typeOfText);
+        void setTypeOfText(noNamespace.TextDocument.Text.TypeOfText.Enum typeOfText);
         
         /**
          * Sets (as xml) the "typeOfText" attribute
          */
-        void xsetTypeOfText(org.apache.xmlbeans.XmlString typeOfText);
+        void xsetTypeOfText(noNamespace.TextDocument.Text.TypeOfText typeOfText);
+        
+        /**
+         * An XML typeOfText(@).
+         *
+         * This is an atomic type that is a restriction of noNamespace.TextDocument$Text$TypeOfText.
+         */
+        public interface TypeOfText extends org.apache.xmlbeans.XmlString
+        {
+            public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
+                org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(TypeOfText.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sA75ECD0220A9C22DFDD0E419E7724324").resolveHandle("typeoftext7f6battrtype");
+            
+            org.apache.xmlbeans.StringEnumAbstractBase enumValue();
+            void set(org.apache.xmlbeans.StringEnumAbstractBase e);
+            
+            static final Enum LITERAL = Enum.forString("Literal");
+            static final Enum RESOURCE = Enum.forString("Resource");
+            static final Enum DOCUMENT_REFERENCE = Enum.forString("DocumentReference");
+            
+            static final int INT_LITERAL = Enum.INT_LITERAL;
+            static final int INT_RESOURCE = Enum.INT_RESOURCE;
+            static final int INT_DOCUMENT_REFERENCE = Enum.INT_DOCUMENT_REFERENCE;
+            
+            /**
+             * Enumeration value class for noNamespace.TextDocument$Text$TypeOfText.
+             * These enum values can be used as follows:
+             * <pre>
+             * enum.toString(); // returns the string value of the enum
+             * enum.intValue(); // returns an int value, useful for switches
+             * // e.g., case Enum.INT_LITERAL
+             * Enum.forString(s); // returns the enum value for a string
+             * Enum.forInt(i); // returns the enum value for an int
+             * </pre>
+             * Enumeration objects are immutable singleton objects that
+             * can be compared using == object equality. They have no
+             * public constructor. See the constants defined within this
+             * class for all the valid values.
+             */
+            static final class Enum extends org.apache.xmlbeans.StringEnumAbstractBase
+            {
+                /**
+                 * Returns the enum value for a string, or null if none.
+                 */
+                public static Enum forString(java.lang.String s)
+                    { return (Enum)table.forString(s); }
+                /**
+                 * Returns the enum value corresponding to an int, or null if none.
+                 */
+                public static Enum forInt(int i)
+                    { return (Enum)table.forInt(i); }
+                
+                private Enum(java.lang.String s, int i)
+                    { super(s, i); }
+                
+                static final int INT_LITERAL = 1;
+                static final int INT_RESOURCE = 2;
+                static final int INT_DOCUMENT_REFERENCE = 3;
+                
+                public static final org.apache.xmlbeans.StringEnumAbstractBase.Table table =
+                    new org.apache.xmlbeans.StringEnumAbstractBase.Table
+                (
+                    new Enum[]
+                    {
+                      new Enum("Literal", INT_LITERAL),
+                      new Enum("Resource", INT_RESOURCE),
+                      new Enum("DocumentReference", INT_DOCUMENT_REFERENCE),
+                    }
+                );
+                private static final long serialVersionUID = 1L;
+                private java.lang.Object readResolve() { return forInt(intValue()); } 
+            }
+            
+            /**
+             * A factory class with static methods for creating instances
+             * of this type.
+             */
+            
+            public static final class Factory
+            {
+                public static noNamespace.TextDocument.Text.TypeOfText newValue(java.lang.Object obj) {
+                  return (noNamespace.TextDocument.Text.TypeOfText) type.newValue( obj ); }
+                
+                public static noNamespace.TextDocument.Text.TypeOfText newInstance() {
+                  return (noNamespace.TextDocument.Text.TypeOfText) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().newInstance( type, null ); }
+                
+                public static noNamespace.TextDocument.Text.TypeOfText newInstance(org.apache.xmlbeans.XmlOptions options) {
+                  return (noNamespace.TextDocument.Text.TypeOfText) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().newInstance( type, options ); }
+                
+                private Factory() { } // No instance of this class allowed
+            }
+        }
         
         /**
          * A factory class with static methods for creating instances

@@ -17,7 +17,7 @@ package noNamespace;
 public interface NoteDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(NoteDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("noted3ebdoctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(NoteDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sA75ECD0220A9C22DFDD0E419E7724324").resolveHandle("noted3ebdoctype");
     
     /**
      * Gets the "note" element
@@ -42,7 +42,7 @@ public interface NoteDocument extends org.apache.xmlbeans.XmlObject
     public interface Note extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Note.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("notef3adelemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Note.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sA75ECD0220A9C22DFDD0E419E7724324").resolveHandle("notef3adelemtype");
         
         /**
          * Gets the "text" element
@@ -122,22 +122,120 @@ public interface NoteDocument extends org.apache.xmlbeans.XmlObject
         /**
          * Gets the "type" attribute
          */
-        java.lang.String getType();
+        noNamespace.NoteDocument.Note.Type.Enum getType();
         
         /**
          * Gets (as xml) the "type" attribute
          */
-        org.apache.xmlbeans.XmlString xgetType();
+        noNamespace.NoteDocument.Note.Type xgetType();
         
         /**
          * Sets the "type" attribute
          */
-        void setType(java.lang.String type);
+        void setType(noNamespace.NoteDocument.Note.Type.Enum type);
         
         /**
          * Sets (as xml) the "type" attribute
          */
-        void xsetType(org.apache.xmlbeans.XmlString type);
+        void xsetType(noNamespace.NoteDocument.Note.Type type);
+        
+        /**
+         * An XML type(@).
+         *
+         * This is an atomic type that is a restriction of noNamespace.NoteDocument$Note$Type.
+         */
+        public interface Type extends org.apache.xmlbeans.XmlString
+        {
+            public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
+                org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Type.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sA75ECD0220A9C22DFDD0E419E7724324").resolveHandle("typeb787attrtype");
+            
+            org.apache.xmlbeans.StringEnumAbstractBase enumValue();
+            void set(org.apache.xmlbeans.StringEnumAbstractBase e);
+            
+            static final Enum CHANGE_NOTE = Enum.forString("changeNote");
+            static final Enum EDITORIAL_NOTE = Enum.forString("editorialNote");
+            static final Enum EXAMPLE = Enum.forString("example");
+            static final Enum HISTORY_NOTE = Enum.forString("historyNote");
+            static final Enum SCOPE_NOTE = Enum.forString("scopeNote");
+            
+            static final int INT_CHANGE_NOTE = Enum.INT_CHANGE_NOTE;
+            static final int INT_EDITORIAL_NOTE = Enum.INT_EDITORIAL_NOTE;
+            static final int INT_EXAMPLE = Enum.INT_EXAMPLE;
+            static final int INT_HISTORY_NOTE = Enum.INT_HISTORY_NOTE;
+            static final int INT_SCOPE_NOTE = Enum.INT_SCOPE_NOTE;
+            
+            /**
+             * Enumeration value class for noNamespace.NoteDocument$Note$Type.
+             * These enum values can be used as follows:
+             * <pre>
+             * enum.toString(); // returns the string value of the enum
+             * enum.intValue(); // returns an int value, useful for switches
+             * // e.g., case Enum.INT_CHANGE_NOTE
+             * Enum.forString(s); // returns the enum value for a string
+             * Enum.forInt(i); // returns the enum value for an int
+             * </pre>
+             * Enumeration objects are immutable singleton objects that
+             * can be compared using == object equality. They have no
+             * public constructor. See the constants defined within this
+             * class for all the valid values.
+             */
+            static final class Enum extends org.apache.xmlbeans.StringEnumAbstractBase
+            {
+                /**
+                 * Returns the enum value for a string, or null if none.
+                 */
+                public static Enum forString(java.lang.String s)
+                    { return (Enum)table.forString(s); }
+                /**
+                 * Returns the enum value corresponding to an int, or null if none.
+                 */
+                public static Enum forInt(int i)
+                    { return (Enum)table.forInt(i); }
+                
+                private Enum(java.lang.String s, int i)
+                    { super(s, i); }
+                
+                static final int INT_CHANGE_NOTE = 1;
+                static final int INT_EDITORIAL_NOTE = 2;
+                static final int INT_EXAMPLE = 3;
+                static final int INT_HISTORY_NOTE = 4;
+                static final int INT_SCOPE_NOTE = 5;
+                
+                public static final org.apache.xmlbeans.StringEnumAbstractBase.Table table =
+                    new org.apache.xmlbeans.StringEnumAbstractBase.Table
+                (
+                    new Enum[]
+                    {
+                      new Enum("changeNote", INT_CHANGE_NOTE),
+                      new Enum("editorialNote", INT_EDITORIAL_NOTE),
+                      new Enum("example", INT_EXAMPLE),
+                      new Enum("historyNote", INT_HISTORY_NOTE),
+                      new Enum("scopeNote", INT_SCOPE_NOTE),
+                    }
+                );
+                private static final long serialVersionUID = 1L;
+                private java.lang.Object readResolve() { return forInt(intValue()); } 
+            }
+            
+            /**
+             * A factory class with static methods for creating instances
+             * of this type.
+             */
+            
+            public static final class Factory
+            {
+                public static noNamespace.NoteDocument.Note.Type newValue(java.lang.Object obj) {
+                  return (noNamespace.NoteDocument.Note.Type) type.newValue( obj ); }
+                
+                public static noNamespace.NoteDocument.Note.Type newInstance() {
+                  return (noNamespace.NoteDocument.Note.Type) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().newInstance( type, null ); }
+                
+                public static noNamespace.NoteDocument.Note.Type newInstance(org.apache.xmlbeans.XmlOptions options) {
+                  return (noNamespace.NoteDocument.Note.Type) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().newInstance( type, options ); }
+                
+                private Factory() { } // No instance of this class allowed
+            }
+        }
         
         /**
          * A factory class with static methods for creating instances

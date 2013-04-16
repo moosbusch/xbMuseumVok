@@ -17,7 +17,7 @@ package noNamespace;
 public interface PrefTermDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(PrefTermDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("prefterm10a8doctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(PrefTermDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sA75ECD0220A9C22DFDD0E419E7724324").resolveHandle("prefterm10a8doctype");
     
     /**
      * Gets the "prefTerm" element
@@ -42,7 +42,7 @@ public interface PrefTermDocument extends org.apache.xmlbeans.XmlObject
     public interface PrefTerm extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(PrefTerm.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sF7F2360BB1D992D3186592B1148A258E").resolveHandle("prefterm6a0delemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(PrefTerm.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sA75ECD0220A9C22DFDD0E419E7724324").resolveHandle("prefterm6a0delemtype");
         
         /**
          * Gets the "prefLabel" element

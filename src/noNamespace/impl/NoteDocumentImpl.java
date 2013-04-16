@@ -315,7 +315,7 @@ public class NoteDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComplex
         /**
          * Gets the "type" attribute
          */
-        public java.lang.String getType()
+        public noNamespace.NoteDocument.Note.Type.Enum getType()
         {
             synchronized (monitor())
             {
@@ -326,20 +326,20 @@ public class NoteDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComplex
                 {
                     return null;
                 }
-                return target.getStringValue();
+                return (noNamespace.NoteDocument.Note.Type.Enum)target.getEnumValue();
             }
         }
         
         /**
          * Gets (as xml) the "type" attribute
          */
-        public org.apache.xmlbeans.XmlString xgetType()
+        public noNamespace.NoteDocument.Note.Type xgetType()
         {
             synchronized (monitor())
             {
                 check_orphaned();
-                org.apache.xmlbeans.XmlString target = null;
-                target = (org.apache.xmlbeans.XmlString)get_store().find_attribute_user(TYPE$6);
+                noNamespace.NoteDocument.Note.Type target = null;
+                target = (noNamespace.NoteDocument.Note.Type)get_store().find_attribute_user(TYPE$6);
                 return target;
             }
         }
@@ -347,7 +347,7 @@ public class NoteDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComplex
         /**
          * Sets the "type" attribute
          */
-        @Inject(optional=true) public void setType(java.lang.String type)
+        @Inject(optional=true) public void setType(noNamespace.NoteDocument.Note.Type.Enum type)
         {
             synchronized (monitor())
             {
@@ -358,25 +358,44 @@ public class NoteDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComplex
                 {
                     target = (org.apache.xmlbeans.SimpleValue)get_store().add_attribute_user(TYPE$6);
                 }
-                target.setStringValue(type);
+                target.setEnumValue(type);
             }
         }
         
         /**
          * Sets (as xml) the "type" attribute
          */
-        public void xsetType(org.apache.xmlbeans.XmlString type)
+        public void xsetType(noNamespace.NoteDocument.Note.Type type)
         {
             synchronized (monitor())
             {
                 check_orphaned();
-                org.apache.xmlbeans.XmlString target = null;
-                target = (org.apache.xmlbeans.XmlString)get_store().find_attribute_user(TYPE$6);
+                noNamespace.NoteDocument.Note.Type target = null;
+                target = (noNamespace.NoteDocument.Note.Type)get_store().find_attribute_user(TYPE$6);
                 if (target == null)
                 {
-                    target = (org.apache.xmlbeans.XmlString)get_store().add_attribute_user(TYPE$6);
+                    target = (noNamespace.NoteDocument.Note.Type)get_store().add_attribute_user(TYPE$6);
                 }
                 target.set(type);
+            }
+        }
+        /**
+         * An XML type(@).
+         *
+         * This is an atomic type that is a restriction of noNamespace.NoteDocument$Note$Type.
+         */
+        public static class TypeImpl extends org.apache.xmlbeans.impl.values.JavaStringEnumerationHolderEx implements noNamespace.NoteDocument.Note.Type
+        {
+            private static final long serialVersionUID = 1L;
+            
+            public TypeImpl(org.apache.xmlbeans.SchemaType sType)
+            {
+                super(sType, false);
+            }
+            
+            protected TypeImpl(org.apache.xmlbeans.SchemaType sType, boolean b)
+            {
+                super(sType, b);
             }
         }
     }

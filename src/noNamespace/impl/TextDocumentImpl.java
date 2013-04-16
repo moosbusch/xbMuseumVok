@@ -90,7 +90,7 @@ public class TextDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComplex
         /**
          * Gets the "typeOfText" attribute
          */
-        public java.lang.String getTypeOfText()
+        public noNamespace.TextDocument.Text.TypeOfText.Enum getTypeOfText()
         {
             synchronized (monitor())
             {
@@ -101,20 +101,20 @@ public class TextDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComplex
                 {
                     return null;
                 }
-                return target.getStringValue();
+                return (noNamespace.TextDocument.Text.TypeOfText.Enum)target.getEnumValue();
             }
         }
         
         /**
          * Gets (as xml) the "typeOfText" attribute
          */
-        public org.apache.xmlbeans.XmlString xgetTypeOfText()
+        public noNamespace.TextDocument.Text.TypeOfText xgetTypeOfText()
         {
             synchronized (monitor())
             {
                 check_orphaned();
-                org.apache.xmlbeans.XmlString target = null;
-                target = (org.apache.xmlbeans.XmlString)get_store().find_attribute_user(TYPEOFTEXT$0);
+                noNamespace.TextDocument.Text.TypeOfText target = null;
+                target = (noNamespace.TextDocument.Text.TypeOfText)get_store().find_attribute_user(TYPEOFTEXT$0);
                 return target;
             }
         }
@@ -122,7 +122,7 @@ public class TextDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComplex
         /**
          * Sets the "typeOfText" attribute
          */
-        @Inject(optional=true) public void setTypeOfText(java.lang.String typeOfText)
+        @Inject(optional=true) public void setTypeOfText(noNamespace.TextDocument.Text.TypeOfText.Enum typeOfText)
         {
             synchronized (monitor())
             {
@@ -133,25 +133,44 @@ public class TextDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComplex
                 {
                     target = (org.apache.xmlbeans.SimpleValue)get_store().add_attribute_user(TYPEOFTEXT$0);
                 }
-                target.setStringValue(typeOfText);
+                target.setEnumValue(typeOfText);
             }
         }
         
         /**
          * Sets (as xml) the "typeOfText" attribute
          */
-        public void xsetTypeOfText(org.apache.xmlbeans.XmlString typeOfText)
+        public void xsetTypeOfText(noNamespace.TextDocument.Text.TypeOfText typeOfText)
         {
             synchronized (monitor())
             {
                 check_orphaned();
-                org.apache.xmlbeans.XmlString target = null;
-                target = (org.apache.xmlbeans.XmlString)get_store().find_attribute_user(TYPEOFTEXT$0);
+                noNamespace.TextDocument.Text.TypeOfText target = null;
+                target = (noNamespace.TextDocument.Text.TypeOfText)get_store().find_attribute_user(TYPEOFTEXT$0);
                 if (target == null)
                 {
-                    target = (org.apache.xmlbeans.XmlString)get_store().add_attribute_user(TYPEOFTEXT$0);
+                    target = (noNamespace.TextDocument.Text.TypeOfText)get_store().add_attribute_user(TYPEOFTEXT$0);
                 }
                 target.set(typeOfText);
+            }
+        }
+        /**
+         * An XML typeOfText(@).
+         *
+         * This is an atomic type that is a restriction of noNamespace.TextDocument$Text$TypeOfText.
+         */
+        public static class TypeOfTextImpl extends org.apache.xmlbeans.impl.values.JavaStringEnumerationHolderEx implements noNamespace.TextDocument.Text.TypeOfText
+        {
+            private static final long serialVersionUID = 1L;
+            
+            public TypeOfTextImpl(org.apache.xmlbeans.SchemaType sType)
+            {
+                super(sType, false);
+            }
+            
+            protected TypeOfTextImpl(org.apache.xmlbeans.SchemaType sType, boolean b)
+            {
+                super(sType, b);
             }
         }
     }
