@@ -77,7 +77,7 @@ public class MuseumVokObjectFactory implements ObjectFactory {
         return MuseumvokDocument.Factory.parse(in);
     }
 
-    public static void saveMuseumVokDocument(MuseumvokDocument museumVokDocument,
+    public void saveMuseumVokDocument(MuseumvokDocument museumVokDocument,
             OutputStream out) throws IOException {
         XmlOptions xmlOptions = new XmlOptions();
         xmlOptions.setSavePrettyPrint();

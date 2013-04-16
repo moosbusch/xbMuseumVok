@@ -44,7 +44,8 @@ import noNamespace.TextDocument.Text;
 import noNamespace.UseForDocument;
 import org.apache.xmlbeans.XmlObject;
 import org.apache.xmlbeans.impl.xb.xsdschema.NotationDocument;
-import org.moosbusch.museum.museumvok.util.MuseumVokObjectFactory;
+import org.moosbusch.museum.museumvok.document.Document;
+import org.moosbusch.museum.museumvok.document.impl.DocumentImpl;
 
 /**
  *
@@ -81,6 +82,11 @@ public class MuseumVokModule extends AbstractModule {
 //    public MuseumVokObjectFactory getObjectFactory() {
 //        return MuseumVokObjectFactory.getInstance();
 //    }
+
+    @Provides
+    public Document createDocument() {
+        return new DocumentImpl();
+    }
 
     @Provides
     public CreationDocument createCreationDocument() {
