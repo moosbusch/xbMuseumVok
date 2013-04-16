@@ -7,6 +7,7 @@
  * Automatically generated - do not modify.
  */
 package noNamespace.impl;  import com.google.inject.Inject;
+import org.moosbusch.museum.museumvok.inject.annotation.Language;
 
 /**
  * A document containing one altTerm(@) element.
@@ -376,7 +377,7 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets the "lang" attribute
          */
-        @Inject(optional=true) public void setLang(java.lang.String lang)
+        @Inject(optional=true) public void setLang(@Language java.lang.String lang)
         {
             synchronized (monitor())
             {

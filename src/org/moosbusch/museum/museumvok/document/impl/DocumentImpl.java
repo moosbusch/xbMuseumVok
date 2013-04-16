@@ -4,17 +4,13 @@
  */
 package org.moosbusch.museum.museumvok.document.impl;
 
-import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-import java.util.Collection;
-import java.util.Collections;
-import noNamespace.ConceptDocument.Concept;
 import org.apache.xmlbeans.XmlException;
+import org.moosbusch.museum.museumvok.document.Document;
 import org.moosbusch.museum.museumvok.document.spi.AbstractDocument;
-import org.moosbusch.museum.museumvok.util.MuseumVokObjectFactory;
 
 /**
  *
@@ -22,52 +18,26 @@ import org.moosbusch.museum.museumvok.util.MuseumVokObjectFactory;
  */
 public class DocumentImpl extends AbstractDocument {
 
-    public DocumentImpl() {
+    public DocumentImpl(String language) {
+        super(language);
     }
 
-    public DocumentImpl(File f) throws IOException, XmlException {
-        super(f);
+    public DocumentImpl(File f, String language) throws IOException, XmlException {
+        super(f, language);
     }
 
-    public DocumentImpl(InputStream in) throws IOException, XmlException {
-        super(in);
+    public DocumentImpl(InputStream in, String language) throws IOException, XmlException {
+        super(in, language);
     }
 
-    public DocumentImpl(URL url) throws IOException, XmlException {
-        super(url);
-    }
-
-    @Override
-    public void loadDocument(InputStream input) throws IOException, XmlException {
-        setMuseumVokDocument(
-                MuseumVokObjectFactory.getInstance().loadMuseumVokDocument(input));
+    public DocumentImpl(URL url, String language) throws IOException, XmlException {
+        super(url, language);
     }
 
     @Override
-    public void saveDocument(URL url) throws IOException {
-        saveDocument(new BufferedOutputStream(
-                url.openConnection().getOutputStream()));
+    protected String createLanguage() {
+        return Document.DEFAULT_LANGUAGE;
     }
 
-    @Override
-    public void clearDocument() {
-        setMuseumVokDocument(
-                MuseumVokObjectFactory.getInstance().createMuseumvokDocument());
-    }
 
-    @Override
-    public void addConcept(Concept concept) {
-        getMuseumVokDocument().getMuseumvok().getConceptList().add(concept);
-    }
-
-    @Override
-    public void removeConcept(Concept concept) {
-        getMuseumVokDocument().getMuseumvok().getConceptList().remove(concept);
-    }
-
-    @Override
-    public Collection<Concept> getConcepts() {
-        return Collections.unmodifiableCollection(
-                getMuseumVokDocument().getMuseumvok().getConceptList());
-    }
 }

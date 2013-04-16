@@ -1,12 +1,13 @@
 /*
  * An XML document type.
  * Localname: prefTerm
- * Namespace: 
+ * Namespace:
  * Java type: noNamespace.PrefTermDocument
  *
  * Automatically generated - do not modify.
  */
 package noNamespace.impl;  import com.google.inject.Inject;
+import org.moosbusch.museum.museumvok.inject.annotation.Language;
 /**
  * A document containing one prefTerm(@) element.
  *
@@ -15,16 +16,16 @@ package noNamespace.impl;  import com.google.inject.Inject;
 public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComplexContentImpl implements noNamespace.PrefTermDocument
 {
     private static final long serialVersionUID = 1L;
-    
+
     public PrefTermDocumentImpl(org.apache.xmlbeans.SchemaType sType)
     {
         super(sType);
     }
-    
-    private static final javax.xml.namespace.QName PREFTERM$0 = 
+
+    private static final javax.xml.namespace.QName PREFTERM$0 =
         new javax.xml.namespace.QName("", "prefTerm");
-    
-    
+
+
     /**
      * Gets the "prefTerm" element
      */
@@ -42,7 +43,7 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
             return target;
         }
     }
-    
+
     /**
      * Sets the "prefTerm" element
      */
@@ -50,7 +51,7 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
     {
         generatedSetterHelperImpl(prefTerm, PREFTERM$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
-    
+
     /**
      * Appends and returns a new empty "prefTerm" element
      */
@@ -72,20 +73,20 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
     public static class PrefTermImpl extends org.apache.xmlbeans.impl.values.XmlComplexContentImpl implements noNamespace.PrefTermDocument.PrefTerm
     {
         private static final long serialVersionUID = 1L;
-        
+
         public PrefTermImpl(org.apache.xmlbeans.SchemaType sType)
         {
             super(sType);
         }
-        
-        private static final javax.xml.namespace.QName PREFLABEL$0 = 
+
+        private static final javax.xml.namespace.QName PREFLABEL$0 =
             new javax.xml.namespace.QName("", "prefLabel");
-        private static final javax.xml.namespace.QName SOURCE$2 = 
+        private static final javax.xml.namespace.QName SOURCE$2 =
             new javax.xml.namespace.QName("", "source");
-        private static final javax.xml.namespace.QName LANG$4 = 
+        private static final javax.xml.namespace.QName LANG$4 =
             new javax.xml.namespace.QName("", "lang");
-        
-        
+
+
         /**
          * Gets the "prefLabel" element
          */
@@ -103,7 +104,7 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
                 return target.getStringValue();
             }
         }
-        
+
         /**
          * Gets (as xml) the "prefLabel" element
          */
@@ -117,7 +118,7 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
                 return target;
             }
         }
-        
+
         /**
          * Sets the "prefLabel" element
          */
@@ -135,7 +136,7 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
                 target.setStringValue(prefLabel);
             }
         }
-        
+
         /**
          * Sets (as xml) the "prefLabel" element
          */
@@ -153,7 +154,7 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
                 target.set(prefLabel);
             }
         }
-        
+
         /**
          * Gets the "source" element
          */
@@ -171,7 +172,7 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
                 return target.getStringValue();
             }
         }
-        
+
         /**
          * Gets (as xml) the "source" element
          */
@@ -185,7 +186,7 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
                 return target;
             }
         }
-        
+
         /**
          * True if has "source" element
          */
@@ -197,7 +198,7 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
                 return get_store().count_elements(SOURCE$2) != 0;
             }
         }
-        
+
         /**
          * Sets the "source" element
          */
@@ -215,7 +216,7 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
                 target.setStringValue(source);
             }
         }
-        
+
         /**
          * Sets (as xml) the "source" element
          */
@@ -233,7 +234,7 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
                 target.set(source);
             }
         }
-        
+
         /**
          * Unsets the "source" element
          */
@@ -245,7 +246,7 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
                 get_store().remove_element(SOURCE$2, 0);
             }
         }
-        
+
         /**
          * Gets the "lang" attribute
          */
@@ -263,7 +264,7 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
                 return target.getStringValue();
             }
         }
-        
+
         /**
          * Gets (as xml) the "lang" attribute
          */
@@ -277,11 +278,11 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
                 return target;
             }
         }
-        
+
         /**
          * Sets the "lang" attribute
          */
-        @Inject(optional=true) public void setLang(java.lang.String lang)
+        @Inject(optional=true) public void setLang(@Language java.lang.String lang)
         {
             synchronized (monitor())
             {
@@ -295,7 +296,7 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
                 target.setStringValue(lang);
             }
         }
-        
+
         /**
          * Sets (as xml) the "lang" attribute
          */

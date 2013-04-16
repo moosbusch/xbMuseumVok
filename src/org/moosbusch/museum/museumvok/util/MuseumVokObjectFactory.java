@@ -53,11 +53,8 @@ public class MuseumVokObjectFactory implements ObjectFactory {
     public static final String USE_FOR_LIST_PROPERTY_NAME =
             "noNamespace.impl.ConceptDocumentImpl$ConceptImpl.useforlist";
 
-    protected MuseumVokObjectFactory() {
-    }
-
-    public static MuseumVokObjectFactory getInstance() {
-        return MuseumVokFactoryHolder.INSTANCE;
+    public MuseumVokModule createModule() {
+        return new MuseumVokModule();
     }
 
     public String getRFC3066Locale(Locale locale) {
@@ -73,7 +70,7 @@ public class MuseumVokObjectFactory implements ObjectFactory {
     }
 
     private Injector createMuseumVokInjector() {
-        return Guice.createInjector(new MuseumVokModule());
+        return Guice.createInjector(createModule());
     }
 
     @SuppressWarnings("unchecked")
@@ -103,8 +100,4 @@ public class MuseumVokObjectFactory implements ObjectFactory {
         return createMuseumVokObject(type);
     }
 
-    private static class MuseumVokFactoryHolder {
-
-        private static final MuseumVokObjectFactory INSTANCE = new MuseumVokObjectFactory();
-    }
 }

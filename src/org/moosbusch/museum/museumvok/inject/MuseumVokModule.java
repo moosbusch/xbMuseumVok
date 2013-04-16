@@ -64,17 +64,7 @@ public class MuseumVokModule extends AbstractModule {
 
     @Override
     protected void configure() {
-        binder().bind(String.class).annotatedWith(Language.class).toInstance(Locale.getDefault().toLanguageTag());
-    }
-
-//    @Provides
-//    public MuseumVokObjectFactory getObjectFactory() {
-//        return MuseumVokObjectFactory.getInstance();
-//    }
-
-    @Provides
-    public Document createDocument() {
-        return new DocumentImpl();
+        binder().bind(String.class).annotatedWith(Language.class).toInstance(Document.DEFAULT_LANGUAGE);
     }
 
     @Provides
@@ -172,6 +162,7 @@ public class MuseumVokModule extends AbstractModule {
     public Concept createConcept() {
         Concept result = ConceptDocument.Concept.Factory.newInstance();
         result = entityCreated(result);
+        result.getPrefTermList().add(createPrefTerm());
         return result;
     }
 

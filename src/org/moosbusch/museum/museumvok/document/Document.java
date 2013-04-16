@@ -10,6 +10,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
 import java.util.Collection;
+import java.util.Locale;
 import noNamespace.ConceptDocument.Concept;
 import org.apache.xmlbeans.XmlException;
 
@@ -18,6 +19,8 @@ import org.apache.xmlbeans.XmlException;
  * @author moosbusch
  */
 public interface Document {
+
+    public static final String DEFAULT_LANGUAGE = Locale.getDefault().toLanguageTag();
 
     public void addConcept(Concept concept);
 
@@ -41,5 +44,4 @@ public interface Document {
 
     public String getLanguage();
 
-    public void setLanguage(String langRFC3066);
 }
