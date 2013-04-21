@@ -1,18 +1,12 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+
+ *
  */
 package org.moosbusch.museum.museumvok.document.spi;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.net.URL;
 import java.util.Collection;
 import java.util.Collections;
 import noNamespace.ConceptDocument;
@@ -35,35 +29,17 @@ public abstract class AbstractDocument implements Document {
         init();
     }
 
-    public AbstractDocument(File f, String language) throws IOException, XmlException {
-        this.language = initLanguage();
-        init(f);
-    }
-
     public AbstractDocument(InputStream in, String language) throws IOException, XmlException {
         this.language = initLanguage();
         init(in);
-    }
-
-    public AbstractDocument(URL url, String language) throws IOException, XmlException {
-        this.language = language;
-        init(url);
     }
 
     private void init() {
         clearDocument();
     }
 
-    private void init(File f) throws IOException, XmlException {
-        loadDocument(f);
-    }
-
     private void init(InputStream in) throws IOException, XmlException {
         loadDocument(in);
-    }
-
-    private void init(URL url) throws IOException, XmlException {
-        loadDocument(url);
     }
 
     private String initLanguage() {
@@ -81,30 +57,9 @@ public abstract class AbstractDocument implements Document {
     }
 
     @Override
-    public void loadDocument(File file) throws IOException, XmlException {
-        loadDocument(new BufferedInputStream(new FileInputStream(file)));
-    }
-
-    @Override
-    public void loadDocument(URL url) throws IOException, XmlException {
-        loadDocument(new BufferedInputStream(url.openStream()));
-    }
-
-    @Override
     public void loadDocument(InputStream input) throws IOException, XmlException {
         setMuseumVokDocument(
                 new MuseumVokObjectFactory().loadMuseumVokDocument(input));
-    }
-
-    @Override
-    public void saveDocument(URL url) throws IOException {
-        saveDocument(new BufferedOutputStream(
-                url.openConnection().getOutputStream()));
-    }
-
-    @Override
-    public void saveDocument(File file) throws IOException {
-        saveDocument(new BufferedOutputStream(new FileOutputStream(file)));
     }
 
     @Override
