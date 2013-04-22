@@ -13,6 +13,7 @@ import noNamespace.ConceptDocument;
 import noNamespace.MuseumvokDocument;
 import org.apache.xmlbeans.XmlCursor;
 import org.apache.xmlbeans.XmlException;
+import org.apache.xmlbeans.XmlObject;
 import org.apache.xmlbeans.XmlOptions;
 import org.apache.xmlbeans.impl.store.Path;
 import org.moosbusch.museum.document.AbstractMuseumXmlDocument;
@@ -48,12 +49,12 @@ public abstract class AbstractDocument<T extends MuseumVokObjectFactory>
     }
 
     @Override
-    public Object getObjectByXPath(String xpath) {
+    public XmlObject getObjectByXPath(String xpath) {
         XmlOptions options = new XmlOptions();
         options.put(Path.PATH_DELEGATE_INTERFACE, PATH_DELEGATE_INTERFACE_CLASS);
         XmlCursor cur = getMuseumVokDocument().getMuseumvok().newCursor();
         cur.selectPath(xpath, options);
-        Object result = cur.getSelectionCount();
+        XmlObject result = cur.getObject();
         cur.dispose();
 
         return result;
