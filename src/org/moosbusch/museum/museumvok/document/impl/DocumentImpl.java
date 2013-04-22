@@ -17,12 +17,11 @@ import org.moosbusch.museum.museumvok.util.MuseumVokObjectFactory;
  */
 public class DocumentImpl extends AbstractDocument<MuseumVokObjectFactory> {
 
-    public DocumentImpl(String language) {
-        super(language);
+    public DocumentImpl() {
     }
 
-    public DocumentImpl(InputStream in, String language) throws IOException, XmlException {
-        super(in, language);
+    public DocumentImpl(InputStream in) throws IOException, XmlException {
+        super(in);
     }
 
     @Override
@@ -34,6 +33,4 @@ public class DocumentImpl extends AbstractDocument<MuseumVokObjectFactory> {
     protected MuseumVokObjectFactory createObjectFactory() {
         return new MuseumVokObjectFactory();
     }
-
-
 }

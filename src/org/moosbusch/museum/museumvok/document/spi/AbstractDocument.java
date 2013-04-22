@@ -9,15 +9,13 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.StringTokenizer;
 import noNamespace.ConceptDocument;
 import noNamespace.MuseumvokDocument;
 import org.apache.xmlbeans.XmlCursor;
 import org.apache.xmlbeans.XmlException;
 import org.apache.xmlbeans.XmlOptions;
 import org.apache.xmlbeans.impl.store.Path;
+import org.moosbusch.museum.document.AbstractMuseumXmlDocument;
 import org.moosbusch.museum.museumvok.document.Document;
 import org.moosbusch.museum.museumvok.util.MuseumVokObjectFactory;
 
@@ -26,43 +24,16 @@ import org.moosbusch.museum.museumvok.util.MuseumVokObjectFactory;
  * @author moosbusch
  */
 public abstract class AbstractDocument<T extends MuseumVokObjectFactory>
-        implements Document<T> {
+        extends AbstractMuseumXmlDocument<T> implements Document<T> {
 
     private MuseumvokDocument museumVokDocument;
-    private final String language;
-    private final T objectFactory;
 
-    public AbstractDocument(String language) {
-        this.language = initLanguage();
-        this.objectFactory = initObjectFactory();
-        init();
+    public AbstractDocument() {
     }
 
-    public AbstractDocument(InputStream in, String language) throws IOException, XmlException {
-        this.language = initLanguage();
-        this.objectFactory = initObjectFactory();
-        init(in);
+    public AbstractDocument(InputStream in) throws IOException, XmlException {
+        super(in);
     }
-
-    private void init() {
-        clearDocument();
-    }
-
-    private void init(InputStream in) throws IOException, XmlException {
-        loadDocument(in);
-    }
-
-    private String initLanguage() {
-        return createLanguage();
-    }
-
-    private T initObjectFactory() {
-        return createObjectFactory();
-    }
-
-    protected abstract T createObjectFactory();
-
-    protected abstract String createLanguage();
 
     protected final MuseumvokDocument getMuseumVokDocument() {
         return museumVokDocument;
@@ -89,19 +60,13 @@ public abstract class AbstractDocument<T extends MuseumVokObjectFactory>
     }
 
     @Override
-    public T getObjectFactory() {
-        return objectFactory;
-    }
-
-    @Override
     public void loadDocument(InputStream input) throws IOException, XmlException {
         setMuseumVokDocument(getObjectFactory().loadMuseumVokDocument(input));
     }
 
     @Override
     public void saveDocument(OutputStream output) throws IOException {
-        new MuseumVokObjectFactory().saveMuseumVokDocument(
-                getMuseumVokDocument(), output);
+        getObjectFactory().saveMuseumVokDocument(getMuseumVokDocument(), output);
         output.flush();
         output.close();
     }
@@ -126,10 +91,5 @@ public abstract class AbstractDocument<T extends MuseumVokObjectFactory>
     public Collection<ConceptDocument.Concept> getConcepts() {
         return Collections.unmodifiableCollection(
                 getMuseumVokDocument().getMuseumvok().getConceptList());
-    }
-
-    @Override
-    public String getLanguage() {
-        return language;
     }
 }
