@@ -9,20 +9,22 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.StringTokenizer;
 import noNamespace.ConceptDocument;
 import noNamespace.MuseumvokDocument;
+import org.apache.xmlbeans.XmlCursor;
 import org.apache.xmlbeans.XmlException;
-import org.apache.xmlbeans.XmlObject;
 import org.moosbusch.museum.museumvok.document.Document;
 import org.moosbusch.museum.museumvok.util.MuseumVokObjectFactory;
-import org.mvel2.MVEL;
 
 /**
  *
  * @author moosbusch
  */
 public abstract class AbstractDocument<T extends MuseumVokObjectFactory>
-    implements Document<T> {
+        implements Document<T> {
 
     private MuseumvokDocument museumVokDocument;
     private final String language;
@@ -74,7 +76,11 @@ public abstract class AbstractDocument<T extends MuseumVokObjectFactory>
 
     @Override
     public Object getMuseumVokObject(String expression) {
-        
+        XmlCursor cur = getMuseumVokDocument().getMuseumvok().newCursor();
+        cur.selectPath(expression);
+        Object result = cur.getSelectionCount();
+        cur.dispose();
+//        getMuseumVokDocument().getMuseumvok().
 //        return MVEL.eval(expression, getMuseumVokDocument());
 //        return getMuseumVokDocument().selectChildren("", expression);
 //        Object result = getEngine().createExpression(expression).evaluate(getExpressionContext());
@@ -83,7 +89,7 @@ public abstract class AbstractDocument<T extends MuseumVokObjectFactory>
 //            return (T) result;
 //        }
 
-//        return null;
+        return result;
     }
 
     @Override
