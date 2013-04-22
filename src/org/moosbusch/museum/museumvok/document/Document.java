@@ -20,6 +20,8 @@ import org.moosbusch.museum.museumvok.util.MuseumVokObjectFactory;
  */
 public interface Document<T extends MuseumVokObjectFactory> {
 
+    public static final String PATH_DELEGATE_INTERFACE_CLASS =
+            "org.apache.xmlbeans.impl.xpath.saxon.XBeansXPathSaxon95";
     public static final String DEFAULT_LANGUAGE = Locale.getDefault().toLanguageTag();
 
     public void addConcept(Concept concept);
@@ -36,7 +38,7 @@ public interface Document<T extends MuseumVokObjectFactory> {
 
     public String getLanguage();
 
-    public Object getMuseumVokObject(String expression);
+    public Object getObjectByXPath(String xpath);
 
     public T getObjectFactory();
 

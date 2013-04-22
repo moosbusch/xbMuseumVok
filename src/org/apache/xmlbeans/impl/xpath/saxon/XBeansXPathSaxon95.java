@@ -37,7 +37,16 @@ import net.sf.saxon.tree.wrapper.VirtualNode;
 
 import org.apache.xmlbeans.impl.store.PathDelegate;
 
-public class XBeansXPathSaxon
+/**
+     An implementation that is nearly identical to the original
+     XBeansXPathSaxon.class that is included in the XMLBeans-distribution.
+     * It was created to work with Saxon 9.5+, because of Saxon's changed license
+     * (Mozilla Public License 2.0). This new license is now compatible to the
+     * Apache License 2.0. Only some of Saxon's classes changed,
+     * so the imports were fixed accordingly. No new functionality was added.     *
+     */
+
+    public class XBeansXPathSaxon95
         implements PathDelegate.SelectPathInterface
 {
     private Object[] namespaceMap;
@@ -52,7 +61,7 @@ public class XBeansXPathSaxon
      * @param namespaceMap a map of prefix/uri bindings for NS support
      * @param defaultNS the uri for the default element NS, if any
      */
-    public XBeansXPathSaxon(String path, String contextVar,
+    public XBeansXPathSaxon95(String path, String contextVar,
                        Map namespaceMap, String defaultNS)
     {
         this.path = path;

@@ -16,6 +16,8 @@ import noNamespace.ConceptDocument;
 import noNamespace.MuseumvokDocument;
 import org.apache.xmlbeans.XmlCursor;
 import org.apache.xmlbeans.XmlException;
+import org.apache.xmlbeans.XmlOptions;
+import org.apache.xmlbeans.impl.store.Path;
 import org.moosbusch.museum.museumvok.document.Document;
 import org.moosbusch.museum.museumvok.util.MuseumVokObjectFactory;
 
@@ -75,19 +77,13 @@ public abstract class AbstractDocument<T extends MuseumVokObjectFactory>
     }
 
     @Override
-    public Object getMuseumVokObject(String expression) {
+    public Object getObjectByXPath(String xpath) {
+        XmlOptions options = new XmlOptions();
+        options.put(Path.PATH_DELEGATE_INTERFACE, PATH_DELEGATE_INTERFACE_CLASS);
         XmlCursor cur = getMuseumVokDocument().getMuseumvok().newCursor();
-        cur.selectPath(expression);
+        cur.selectPath(xpath, options);
         Object result = cur.getSelectionCount();
         cur.dispose();
-//        getMuseumVokDocument().getMuseumvok().
-//        return MVEL.eval(expression, getMuseumVokDocument());
-//        return getMuseumVokDocument().selectChildren("", expression);
-//        Object result = getEngine().createExpression(expression).evaluate(getExpressionContext());
-//
-//        if (result != null) {
-//            return (T) result;
-//        }
 
         return result;
     }
