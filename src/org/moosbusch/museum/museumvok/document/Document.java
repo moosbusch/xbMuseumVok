@@ -11,12 +11,14 @@ import java.util.Collection;
 import java.util.Locale;
 import noNamespace.ConceptDocument.Concept;
 import org.apache.xmlbeans.XmlException;
+import org.apache.xmlbeans.XmlObject;
+import org.moosbusch.museum.museumvok.util.MuseumVokObjectFactory;
 
 /**
  *
  * @author moosbusch
  */
-public interface Document {
+public interface Document<T extends MuseumVokObjectFactory> {
 
     public static final String DEFAULT_LANGUAGE = Locale.getDefault().toLanguageTag();
 
@@ -33,5 +35,9 @@ public interface Document {
     public void clearDocument();
 
     public String getLanguage();
+
+    public Object getMuseumVokObject(String expression);
+
+    public T getObjectFactory();
 
 }

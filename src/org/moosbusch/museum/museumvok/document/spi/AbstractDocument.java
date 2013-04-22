@@ -12,25 +12,31 @@ import java.util.Collections;
 import noNamespace.ConceptDocument;
 import noNamespace.MuseumvokDocument;
 import org.apache.xmlbeans.XmlException;
+import org.apache.xmlbeans.XmlObject;
 import org.moosbusch.museum.museumvok.document.Document;
 import org.moosbusch.museum.museumvok.util.MuseumVokObjectFactory;
+import org.mvel2.MVEL;
 
 /**
  *
  * @author moosbusch
  */
-public abstract class AbstractDocument implements Document {
+public abstract class AbstractDocument<T extends MuseumVokObjectFactory>
+    implements Document<T> {
 
     private MuseumvokDocument museumVokDocument;
     private final String language;
+    private final T objectFactory;
 
     public AbstractDocument(String language) {
         this.language = initLanguage();
+        this.objectFactory = initObjectFactory();
         init();
     }
 
     public AbstractDocument(InputStream in, String language) throws IOException, XmlException {
         this.language = initLanguage();
+        this.objectFactory = initObjectFactory();
         init(in);
     }
 
@@ -46,20 +52,48 @@ public abstract class AbstractDocument implements Document {
         return createLanguage();
     }
 
+    private T initObjectFactory() {
+        return createObjectFactory();
+    }
+
+    protected abstract T createObjectFactory();
+
     protected abstract String createLanguage();
 
-    protected MuseumvokDocument getMuseumVokDocument() {
+    protected final MuseumvokDocument getMuseumVokDocument() {
         return museumVokDocument;
     }
 
-    protected void setMuseumVokDocument(MuseumvokDocument museumVokDocument) {
-        this.museumVokDocument = museumVokDocument;
+    protected final void setMuseumVokDocument(MuseumvokDocument museumVokDocument) {
+        if (museumVokDocument != null) {
+            this.museumVokDocument = museumVokDocument;
+        } else {
+            throw new NullPointerException();
+        }
+    }
+
+    @Override
+    public Object getMuseumVokObject(String expression) {
+        
+//        return MVEL.eval(expression, getMuseumVokDocument());
+//        return getMuseumVokDocument().selectChildren("", expression);
+//        Object result = getEngine().createExpression(expression).evaluate(getExpressionContext());
+//
+//        if (result != null) {
+//            return (T) result;
+//        }
+
+//        return null;
+    }
+
+    @Override
+    public T getObjectFactory() {
+        return objectFactory;
     }
 
     @Override
     public void loadDocument(InputStream input) throws IOException, XmlException {
-        setMuseumVokDocument(
-                new MuseumVokObjectFactory().loadMuseumVokDocument(input));
+        setMuseumVokDocument(getObjectFactory().loadMuseumVokDocument(input));
     }
 
     @Override
@@ -96,5 +130,4 @@ public abstract class AbstractDocument implements Document {
     public String getLanguage() {
         return language;
     }
-
 }

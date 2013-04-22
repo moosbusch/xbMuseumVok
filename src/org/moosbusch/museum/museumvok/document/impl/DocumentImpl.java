@@ -9,12 +9,13 @@ import java.io.InputStream;
 import org.apache.xmlbeans.XmlException;
 import org.moosbusch.museum.museumvok.document.Document;
 import org.moosbusch.museum.museumvok.document.spi.AbstractDocument;
+import org.moosbusch.museum.museumvok.util.MuseumVokObjectFactory;
 
 /**
  *
  * @author moosbusch
  */
-public class DocumentImpl extends AbstractDocument {
+public class DocumentImpl extends AbstractDocument<MuseumVokObjectFactory> {
 
     public DocumentImpl(String language) {
         super(language);
@@ -27,6 +28,11 @@ public class DocumentImpl extends AbstractDocument {
     @Override
     protected String createLanguage() {
         return Document.DEFAULT_LANGUAGE;
+    }
+
+    @Override
+    protected MuseumVokObjectFactory createObjectFactory() {
+        return new MuseumVokObjectFactory();
     }
 
 
