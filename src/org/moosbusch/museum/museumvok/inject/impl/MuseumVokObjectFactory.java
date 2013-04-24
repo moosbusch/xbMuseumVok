@@ -12,7 +12,6 @@ import org.apache.xmlbeans.XmlException;
 import org.apache.xmlbeans.XmlOptions;
 import org.moosbusch.museum.inject.spi.AbstractMuseumXmlObjectFactory;
 import org.moosbusch.museum.museumvok.inject.MuseumVokModule;
-import org.moosbusch.museum.museumvok.inject.impl.MuseumVokModuleImpl;
 
 /**
  *
