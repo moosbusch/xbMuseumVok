@@ -9,7 +9,7 @@ import java.io.InputStream;
 import org.apache.xmlbeans.XmlException;
 import org.moosbusch.museum.museumvok.document.Document;
 import org.moosbusch.museum.museumvok.document.spi.AbstractDocument;
-import org.moosbusch.museum.museumvok.util.MuseumVokObjectFactory;
+import org.moosbusch.museum.museumvok.inject.impl.MuseumVokObjectFactory;
 
 /**
  *
@@ -22,11 +22,6 @@ public class DocumentImpl extends AbstractDocument<MuseumVokObjectFactory> {
 
     public DocumentImpl(InputStream in) throws IOException, XmlException {
         super(in);
-    }
-
-    @Override
-    protected String createLanguage() {
-        return Document.DEFAULT_LANGUAGE;
     }
 
     @Override
