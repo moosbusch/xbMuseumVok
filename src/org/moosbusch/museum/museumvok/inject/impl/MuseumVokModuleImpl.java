@@ -135,7 +135,7 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     public Concept createConcept() {
         Concept result = ConceptDocument.Concept.Factory.newInstance();
         result = entityCreated(result);
-        result.getPrefTermList().add(createPrefTerm());
+        //result.getPrefTermList().add(createPrefTerm());
         return result;
     }
 
