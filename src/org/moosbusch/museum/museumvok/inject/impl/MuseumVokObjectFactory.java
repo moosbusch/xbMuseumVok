@@ -17,11 +17,21 @@ import org.moosbusch.museum.museumvok.inject.MuseumVokModule;
  *
  * @author moosbusch
  */
-public class MuseumVokObjectFactory extends AbstractMuseumXmlObjectFactory
-        <MuseumVokModule, MuseumvokDocument> {
+public class MuseumVokObjectFactory extends AbstractMuseumXmlObjectFactory<MuseumVokModule, MuseumvokDocument> {
 
-    public MuseumVokModule getModule() {
+    public static final String MUSEUMVOK_DOCTYPE_NAME = "museumvok";
+    public static final String MUSEUMVOK_DOCTYPE_SYSTEM_ID = "museumvok0.2.dtd";
+
+    @Override
+    protected MuseumVokModule createModule() {
         return new MuseumVokModuleImpl();
+    }
+
+    protected void addDocumentTypeDefinition(MuseumvokDocument museumVokDocument) {
+        museumVokDocument.documentProperties().setDoctypeName(
+                MUSEUMVOK_DOCTYPE_NAME);
+        museumVokDocument.documentProperties().setDoctypeSystemId(
+                MUSEUMVOK_DOCTYPE_SYSTEM_ID);
     }
 
     @Override
@@ -41,7 +51,7 @@ public class MuseumVokObjectFactory extends AbstractMuseumXmlObjectFactory
         XmlOptions xmlOptions = new XmlOptions();
         xmlOptions.setSavePrettyPrint();
         xmlOptions.setValidateStrict();
+        addDocumentTypeDefinition(museumVokDocument);
         museumVokDocument.save(out, xmlOptions);
     }
-
 }
