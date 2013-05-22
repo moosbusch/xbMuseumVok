@@ -7,7 +7,7 @@
  * Automatically generated - do not modify.
  */
 package noNamespace.impl;  import com.google.inject.Inject;
-import org.moosbusch.museum.museumvok.inject.annotation.Language;
+import org.moosbusch.museum.inject.annotation.Language;
 /**
  * A document containing one prefTerm(@) element.
  *

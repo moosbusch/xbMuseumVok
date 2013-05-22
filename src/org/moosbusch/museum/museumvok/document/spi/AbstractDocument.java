@@ -30,6 +30,8 @@ public abstract class AbstractDocument<T extends MuseumVokObjectFactory>
         super(in);
     }
 
+    protected abstract void addDocumentTypeDefinition(MuseumvokDocument museumVokDocument);
+
     @Override
     public Museumvok getRootElement() {
         synchronized (getRootWrapperElement().monitor()) {
