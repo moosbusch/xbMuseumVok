@@ -34,15 +34,11 @@ public abstract class AbstractDocument<T extends MuseumVokObjectFactory>
 
     @Override
     public Museumvok getRootElement() {
-        synchronized (getRootWrapperElement().monitor()) {
-            return getRootWrapperElement().getMuseumvok();
-        }
+        return getRootWrapperElement().getMuseumvok();
     }
 
     @Override
     public Collection<Concept> getItems() {
-        synchronized (getRootWrapperElement().monitor()) {
-            return getRootElement().getConceptList();
-        }
+        return getRootElement().getConceptList();
     }
 }
