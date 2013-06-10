@@ -1,32 +1,23 @@
 /*
- * 
+ *
  *
  */
 package org.moosbusch.museum.museumvok.inject.spi;
 
-import org.moosbusch.museum.document.MuseumXmlDocument;
-import org.moosbusch.museum.inject.spi.AbstractMuseumXmlModule;
+import org.moosbusch.museum.document.XmlDocument;
+import org.moosbusch.museum.inject.spi.AbstractXmlModule;
 import org.moosbusch.museum.museumvok.inject.MuseumVokModule;
-import org.moosbusch.museum.museumvok.inject.impl.MuseumVokObjectFactory;
 
 /**
  *
  * @author moosbusch
  */
-public abstract class AbstractMuseumVokModule extends AbstractMuseumXmlModule
+public abstract class AbstractMuseumVokModule extends AbstractXmlModule
     implements MuseumVokModule {
-
-    public AbstractMuseumVokModule(MuseumVokObjectFactory objFactory) {
-        super(objFactory);
-    }
 
     @Override
     protected String createLanguage() {
-        return MuseumXmlDocument.DEFAULT_LANGUAGE;
+        return XmlDocument.DEFAULT_LANGUAGE;
     }
 
-    @Override
-    public MuseumVokObjectFactory getObjectFactory() {
-        return (MuseumVokObjectFactory) super.getObjectFactory();
-    }
 }

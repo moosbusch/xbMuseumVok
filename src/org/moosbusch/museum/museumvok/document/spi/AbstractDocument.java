@@ -11,7 +11,7 @@ import noNamespace.ConceptDocument.Concept;
 import noNamespace.MuseumvokDocument;
 import noNamespace.MuseumvokDocument.Museumvok;
 import org.apache.xmlbeans.XmlException;
-import org.moosbusch.museum.document.spi.AbstractMuseumXmlDocument;
+import org.moosbusch.museum.document.spi.AbstractXmlDocument;
 import org.moosbusch.museum.museumvok.document.Document;
 import org.moosbusch.museum.museumvok.inject.impl.MuseumVokObjectFactory;
 
@@ -20,7 +20,7 @@ import org.moosbusch.museum.museumvok.inject.impl.MuseumVokObjectFactory;
  * @author moosbusch
  */
 public abstract class AbstractDocument<T extends MuseumVokObjectFactory>
-        extends AbstractMuseumXmlDocument<MuseumvokDocument, T, Museumvok, Concept>
+        extends AbstractXmlDocument<MuseumvokDocument, T, Museumvok, Concept>
         implements Document<T> {
 
     public AbstractDocument() {
@@ -38,7 +38,7 @@ public abstract class AbstractDocument<T extends MuseumVokObjectFactory>
     }
 
     @Override
-    public Collection<Concept> getItems() {
+    public Collection<Concept> getRecords() {
         return getRootElement().getConceptList();
     }
 }

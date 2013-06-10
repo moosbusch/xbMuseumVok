@@ -37,10 +37,6 @@ import org.moosbusch.museum.museumvok.inject.spi.AbstractMuseumVokModule;
  */
 public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
 
-    public MuseumVokModuleImpl(MuseumVokObjectFactory objFactory) {
-        super(objFactory);
-    }
-
     @Override
     protected void configureImpl() {
         binder().bind(String.class).annotatedWith(Language.class).toInstance(getLanguage());
@@ -56,7 +52,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public CreationDocument createCreationDocument() {
         CreationDocument result = CreationDocument.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
         return result;
     }
 
@@ -64,7 +59,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public Creation createCreation() {
         Creation result = CreationDocument.Creation.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
         return result;
     }
 
@@ -72,7 +66,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public AltTermDocument createAltTermDocument() {
         AltTermDocument result = AltTermDocument.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
         return result;
     }
 
@@ -80,7 +73,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public AltTerm createAltTerm() {
         AltTerm result = AltTermDocument.AltTerm.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
         return result;
     }
 
@@ -88,7 +80,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public PrefTermDocument createPrefTermDocument() {
         PrefTermDocument result = PrefTermDocument.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
         return result;
     }
 
@@ -96,7 +87,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public PrefTerm createPrefTerm() {
         PrefTerm result = PrefTermDocument.PrefTerm.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
         return result;
     }
 
@@ -104,7 +94,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public NoteDocument createNoteDocument() {
         NoteDocument result = NoteDocument.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
         return result;
     }
 
@@ -112,7 +101,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public Note createNote() {
         Note result = Note.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
         return result;
     }
 
@@ -120,7 +108,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public TextDocument createTextDocument() {
         TextDocument result = TextDocument.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
         return result;
     }
 
@@ -128,7 +115,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public Text createText() {
         Text result = TextDocument.Text.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
         return result;
     }
 
@@ -136,7 +122,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public EquivConceptDocument createEquivConceptDocument() {
         EquivConceptDocument result = EquivConceptDocument.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
         return result;
     }
 
@@ -144,7 +129,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public EquivConcept createEquivConcept() {
         EquivConcept result = EquivConceptDocument.EquivConcept.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
         return result;
     }
 
@@ -152,7 +136,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public ConceptDocument createConceptDocument() {
         ConceptDocument result = ConceptDocument.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
         return result;
     }
 
@@ -160,8 +143,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public Concept createConcept() {
         Concept result = ConceptDocument.Concept.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
-//        result.getPrefTermList().add(createPrefTerm());
         return result;
     }
 
@@ -169,7 +150,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public RelationshipDocument createRelationshipDocument() {
         RelationshipDocument result = RelationshipDocument.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
         return result;
     }
 
@@ -177,7 +157,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public Relationship createRelationship() {
         Relationship result = Relationship.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
         return result;
     }
 
@@ -185,7 +164,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public EquivRelationshipDocument createEquivRelationshipDocument() {
         EquivRelationshipDocument result = EquivRelationshipDocument.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
         return result;
     }
 
@@ -193,7 +171,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public EquivRelationship createEquivRelationship() {
         EquivRelationship result = EquivRelationship.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
         return result;
     }
 
@@ -201,7 +178,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public MuseumvokDocument createMuseumvokDocument() {
         MuseumvokDocument result = MuseumvokDocument.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
         return result;
     }
 
@@ -209,7 +185,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public Museumvok createMuseumvok() {
         Museumvok result = MuseumvokDocument.Museumvok.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
         return result;
     }
 
@@ -217,7 +192,6 @@ public class MuseumVokModuleImpl extends AbstractMuseumVokModule {
     @Override
     public NotationDocument createNotationDocument() {
         NotationDocument result = NotationDocument.Factory.newInstance();
-        getObjectFactory().injectChildMembers(result);
         return result;
     }
 }

@@ -26,13 +26,13 @@ import noNamespace.RelationshipDocument.Relationship;
 import noNamespace.TextDocument;
 import noNamespace.TextDocument.Text;
 import org.apache.xmlbeans.impl.xb.xsdschema.NotationDocument;
-import org.moosbusch.museum.inject.MuseumXmlModule;
+import org.moosbusch.museum.inject.XmlModule;
 
 /**
  *
  * @author moosbusch
  */
-public interface MuseumVokModule extends MuseumXmlModule {
+public interface MuseumVokModule extends XmlModule {
 
     @Provides
     public CreationDocument createCreationDocument();
