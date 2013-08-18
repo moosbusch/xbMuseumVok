@@ -20,9 +20,7 @@ Google (http://www.google.com/).
     [ASL 2.0, http://www.apache.org/licenses/]
 
 This product includes software derived from works created by
-Fachgruppe Dokumentation des Deutschen Museumsbundes / 
-Initiative museumsvokabular.de (http://museum.zib.de/museumsvokabular/index.php),
-(http://www.museumsbund.de/cms/index.php?id=342&L=0).
+Initiative museumsvokabular.de (http://museum.zib.de/museumsvokabular/index.php?main=home).
 
     http://museum.zib.de/museumsvokabular/documents/museumvok0.2.dtd
 
@@ -32,6 +30,15 @@ after the original museumvok0.2.dtd provided by the Initiative museumsvokabular.
 This schema is not a normative specification nor related to the original creators
 by any meaning. This file is provided without warranties of any kind nor will
 the author be liable for any damage arising as the result of using the work.
+
+This product is licensed to you under the Apache License, Version 2.0
+(the "License"). You may not use this product except in compliance with
+the License.
+
+This product may include a number of subcomponents with separate
+copyright notices and license terms. Your use of the source code for
+these subcomponents is subject to the terms and conditions of the
+subcomponent's license, as noted above.
 
 Copyright (C) 2013 Gunnar Kappei (gkappei@web.de). Verbatim copying
 and distribution of this entire article is permitted in any medium,
