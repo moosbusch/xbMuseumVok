@@ -13,26 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.moosbusch.museum.museumvok.inject.impl;
+package org.moosbusch.museum.inject.museumvok.spi;
 
-import noNamespace.MuseumvokDocument;
-import org.moosbusch.museum.inject.spi.AbstractXmlObjectFactory;
-import org.moosbusch.museum.museumvok.inject.MuseumVokModule;
+import org.moosbusch.museum.document.MuseumXmlDocument;
+import org.moosbusch.museum.inject.spi.AbstractMuseumXmlModule;
+import org.moosbusch.museum.inject.museumvok.MuseumVokModule;
+import org.moosbusch.museum.inject.spi.AbstractMuseumXmlModule;
 
 /**
  *
  * @author moosbusch
  */
-public class MuseumVokObjectFactory extends AbstractXmlObjectFactory
-        <MuseumVokModule, MuseumvokDocument> {
+public abstract class AbstractMuseumVokModule extends AbstractMuseumXmlModule
+    implements MuseumVokModule {
 
     @Override
-    protected MuseumVokModule createModule() {
-        return new MuseumVokModuleImpl();
+    protected String createLanguage() {
+        return MuseumXmlDocument.DEFAULT_LANGUAGE;
     }
 
-    @Override
-    public MuseumvokDocument createRootElement() {
-        return createTypedObject(MuseumvokDocument.class);
-    }
 }
