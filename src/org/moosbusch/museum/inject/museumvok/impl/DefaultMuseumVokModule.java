@@ -62,147 +62,127 @@ public class DefaultMuseumVokModule extends AbstractMuseumVokModule {
     @Provides
     @Override
     public CreationDocument createMuseumVokCreationDocument() {
-        CreationDocument result = CreationDocument.Factory.newInstance();
-        return result;
+        return CreationDocument.Factory.newInstance();
     }
 
     @Provides
     @Override
     public Creation createMuseumVokCreation() {
-        Creation result = CreationDocument.Creation.Factory.newInstance();
-        return result;
+        return CreationDocument.Creation.Factory.newInstance();
     }
 
     @Provides
     @Override
     public AltTermDocument createMuseumVokAltTermDocument() {
-        AltTermDocument result = AltTermDocument.Factory.newInstance();
-        return result;
+        return AltTermDocument.Factory.newInstance();
     }
 
     @Provides
     @Override
     public AltTerm createMuseumVokAltTerm() {
-        AltTerm result = AltTermDocument.AltTerm.Factory.newInstance();
-        return result;
+        return AltTermDocument.AltTerm.Factory.newInstance();
     }
 
     @Provides
     @Override
     public PrefTermDocument createMuseumVokPrefTermDocument() {
-        PrefTermDocument result = PrefTermDocument.Factory.newInstance();
-        return result;
+        return PrefTermDocument.Factory.newInstance();
     }
 
     @Provides
     @Override
     public PrefTerm createMuseumVokPrefTerm() {
-        PrefTerm result = PrefTermDocument.PrefTerm.Factory.newInstance();
-        return result;
+        return PrefTermDocument.PrefTerm.Factory.newInstance();
     }
 
     @Provides
     @Override
     public NoteDocument createMuseumVokNoteDocument() {
-        NoteDocument result = NoteDocument.Factory.newInstance();
-        return result;
+        return NoteDocument.Factory.newInstance();
     }
 
     @Provides
     @Override
     public Note createMuseumVokNote() {
-        Note result = Note.Factory.newInstance();
-        return result;
+        return Note.Factory.newInstance();
     }
 
     @Provides
     @Override
     public TextDocument createMuseumVokTextDocument() {
-        TextDocument result = TextDocument.Factory.newInstance();
-        return result;
+        return TextDocument.Factory.newInstance();
     }
 
     @Provides
     @Override
     public Text createMuseumVokText() {
-        Text result = TextDocument.Text.Factory.newInstance();
-        return result;
+        return TextDocument.Text.Factory.newInstance();
     }
 
     @Provides
     @Override
     public EquivConceptDocument createMuseumVokEquivConceptDocument() {
-        EquivConceptDocument result = EquivConceptDocument.Factory.newInstance();
-        return result;
+        return EquivConceptDocument.Factory.newInstance();
     }
 
     @Provides
     @Override
     public EquivConcept createMuseumVokEquivConcept() {
-        EquivConcept result = EquivConceptDocument.EquivConcept.Factory.newInstance();
-        return result;
+        return EquivConceptDocument.EquivConcept.Factory.newInstance();
     }
 
     @Provides
     @Override
     public ConceptDocument createMuseumVokConceptDocument() {
-        ConceptDocument result = ConceptDocument.Factory.newInstance();
-        return result;
+        return ConceptDocument.Factory.newInstance();
     }
 
     @Provides
     @Override
     public Concept createMuseumVokConcept() {
-        Concept result = ConceptDocument.Concept.Factory.newInstance();
-        return result;
+        return ConceptDocument.Concept.Factory.newInstance();
     }
 
     @Provides
     @Override
     public RelationshipDocument createMuseumVokRelationshipDocument() {
-        RelationshipDocument result = RelationshipDocument.Factory.newInstance();
-        return result;
+        return RelationshipDocument.Factory.newInstance();
     }
 
     @Provides
     @Override
     public Relationship createMuseumVokRelationship() {
-        Relationship result = Relationship.Factory.newInstance();
-        return result;
+        return Relationship.Factory.newInstance();
     }
 
     @Provides
     @Override
     public EquivRelationshipDocument createMuseumVokEquivRelationshipDocument() {
-        EquivRelationshipDocument result = EquivRelationshipDocument.Factory.newInstance();
-        return result;
+        return EquivRelationshipDocument.Factory.newInstance();
     }
 
     @Provides
     @Override
     public EquivRelationship createMuseumVokEquivRelationship() {
-        EquivRelationship result = EquivRelationship.Factory.newInstance();
-        return result;
+        return EquivRelationship.Factory.newInstance();
     }
 
     @Provides
     @Override
     public MuseumvokDocument createMuseumVokMuseumvokDocument() {
-        MuseumvokDocument result = MuseumvokDocument.Factory.newInstance();
-        return result;
+        return MuseumvokDocument.Factory.newInstance();
     }
 
     @Provides
     @Override
     public Museumvok createMuseumVokMuseumvok() {
-        Museumvok result = MuseumvokDocument.Museumvok.Factory.newInstance();
-        return result;
+        return MuseumvokDocument.Museumvok.Factory.newInstance();
     }
 
     @Provides
     @Override
     public NotationDocument createMuseumVokNotationDocument() {
-        NotationDocument result = NotationDocument.Factory.newInstance();
-        return result;
+        return NotationDocument.Factory.newInstance();
     }
+
 }
