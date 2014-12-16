@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package noNamespace.impl;  import com.google.inject.Inject;
+package noNamespace.impl;  
 /**
  * A document containing one note(@) element.
  *
@@ -53,7 +53,7 @@ public class NoteDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComplex
     /**
      * Sets the "note" element
      */
-    @Inject(optional=true) public void setNote(noNamespace.NoteDocument.Note note)
+    public void setNote(noNamespace.NoteDocument.Note note)
     {
         generatedSetterHelperImpl(note, NOTE$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
@@ -116,7 +116,7 @@ public class NoteDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComplex
         /**
          * Sets the "text" element
          */
-        @Inject(optional=true) public void setText(noNamespace.TextDocument.Text text)
+        public void setText(noNamespace.TextDocument.Text text)
         {
             generatedSetterHelperImpl(text, TEXT$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
         }
@@ -182,7 +182,7 @@ public class NoteDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComplex
         /**
          * Sets the "editor" element
          */
-        @Inject(optional=true) public void setEditor(java.lang.String editor)
+        public void setEditor(java.lang.String editor)
         {
             synchronized (monitor())
             {
@@ -274,7 +274,7 @@ public class NoteDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComplex
         /**
          * Sets the "edited" element
          */
-        @Inject(optional=true) public void setEdited(java.lang.String edited)
+        public void setEdited(java.lang.String edited)
         {
             synchronized (monitor())
             {
@@ -354,7 +354,7 @@ public class NoteDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComplex
         /**
          * Sets the "type" attribute
          */
-        @Inject(optional=true) public void setType(noNamespace.NoteDocument.Note.Type.Enum type)
+        public void setType(noNamespace.NoteDocument.Note.Type.Enum type)
         {
             synchronized (monitor())
             {

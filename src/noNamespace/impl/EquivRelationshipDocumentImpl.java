@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package noNamespace.impl;  import com.google.inject.Inject;
+package noNamespace.impl;  
 /**
  * A document containing one equivRelationship(@) element.
  *
@@ -53,7 +53,7 @@ public class EquivRelationshipDocumentImpl extends org.apache.xmlbeans.impl.valu
     /**
      * Sets the "equivRelationship" element
      */
-    @Inject(optional=true) public void setEquivRelationship(noNamespace.EquivRelationshipDocument.EquivRelationship equivRelationship)
+    public void setEquivRelationship(noNamespace.EquivRelationshipDocument.EquivRelationship equivRelationship)
     {
         generatedSetterHelperImpl(equivRelationship, EQUIVRELATIONSHIP$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
@@ -112,7 +112,7 @@ public class EquivRelationshipDocumentImpl extends org.apache.xmlbeans.impl.valu
         /**
          * Sets the "equivConcept" element
          */
-        @Inject(optional=true) public void setEquivConcept(noNamespace.EquivConceptDocument.EquivConcept equivConcept)
+        public void setEquivConcept(noNamespace.EquivConceptDocument.EquivConcept equivConcept)
         {
             generatedSetterHelperImpl(equivConcept, EQUIVCONCEPT$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
         }
@@ -166,7 +166,7 @@ public class EquivRelationshipDocumentImpl extends org.apache.xmlbeans.impl.valu
         /**
          * Sets the "mappingRelation" element
          */
-        @Inject(optional=true) public void setMappingRelation(java.lang.String mappingRelation)
+        public void setMappingRelation(java.lang.String mappingRelation)
         {
             synchronized (monitor())
             {

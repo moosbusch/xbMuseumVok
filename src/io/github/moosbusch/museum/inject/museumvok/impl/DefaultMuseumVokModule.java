@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.moosbusch.museum.inject.museumvok.impl;
+package io.github.moosbusch.museum.inject.museumvok.impl;
 
 import com.google.inject.Provides;
 import noNamespace.AltTermDocument;
@@ -37,21 +37,17 @@ import noNamespace.RelationshipDocument.Relationship;
 import noNamespace.TextDocument;
 import noNamespace.TextDocument.Text;
 import org.apache.xmlbeans.impl.xb.xsdschema.NotationDocument;
-import org.moosbusch.museum.document.museumvok.MuseumVokXmlDocument;
-import org.moosbusch.museum.document.museumvok.impl.DefaultMuseumVokXmlDocument;
-import org.moosbusch.museum.inject.annotation.Language;
-import org.moosbusch.museum.inject.museumvok.spi.AbstractMuseumVokModule;
+import io.github.moosbusch.museum.document.museumvok.MuseumVokXmlDocument;
+import io.github.moosbusch.museum.document.museumvok.impl.DefaultMuseumVokObjectFactory;
+import io.github.moosbusch.museum.document.museumvok.impl.DefaultMuseumVokXmlDocument;
+import io.github.moosbusch.museum.inject.museumvok.MuseumVokModule;
+import io.github.moosbusch.museum.inject.spi.AbstractMuseumXmlModule;
 
 /**
  *
  * @author moosbusch
  */
-public class DefaultMuseumVokModule extends AbstractMuseumVokModule {
-
-    @Override
-    protected void configureImpl() {
-        binder().bind(String.class).annotatedWith(Language.class).toInstance(getLanguage());
-    }
+public class DefaultMuseumVokModule extends AbstractMuseumXmlModule implements MuseumVokModule {
 
     @Provides
     @Override

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package noNamespace.impl;  import com.google.inject.Inject;
+package noNamespace.impl;  
 /**
  * A document containing one creation(@) element.
  *
@@ -53,7 +53,7 @@ public class CreationDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
     /**
      * Sets the "creation" element
      */
-    @Inject(optional=true) public void setCreation(noNamespace.CreationDocument.Creation creation)
+    public void setCreation(noNamespace.CreationDocument.Creation creation)
     {
         generatedSetterHelperImpl(creation, CREATION$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
@@ -130,7 +130,7 @@ public class CreationDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
         /**
          * Sets the "source" element
          */
-        @Inject(optional=true) public void setSource(java.lang.String source)
+        public void setSource(java.lang.String source)
         {
             synchronized (monitor())
             {
@@ -198,7 +198,7 @@ public class CreationDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
         /**
          * Sets the "identifier" element
          */
-        @Inject(optional=true) public void setIdentifier(java.lang.String identifier)
+        public void setIdentifier(java.lang.String identifier)
         {
             synchronized (monitor())
             {
@@ -407,7 +407,7 @@ public class CreationDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
         /**
          * Sets array of all "creator" element
          */
-        @Inject(optional=true) public void setCreatorArray(java.lang.String[] creatorArray)
+        public void setCreatorArray(java.lang.String[] creatorArray)
         {
             synchronized (monitor())
             {
@@ -419,7 +419,7 @@ public class CreationDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
         /**
          * Sets ith "creator" element
          */
-        @Inject(optional=true) public void setCreatorArray(int i, java.lang.String creator)
+        public void setCreatorArray(int i, java.lang.String creator)
         {
             synchronized (monitor())
             {
@@ -579,7 +579,7 @@ public class CreationDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
         /**
          * Sets the "created" element
          */
-        @Inject(optional=true) public void setCreated(java.lang.String created)
+        public void setCreated(java.lang.String created)
         {
             synchronized (monitor())
             {

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package noNamespace.impl;  import com.google.inject.Inject;
+package noNamespace.impl;  
 /**
  * A document containing one text(@) element.
  *
@@ -53,7 +53,7 @@ public class TextDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComplex
     /**
      * Sets the "text" element
      */
-    @Inject(optional=true) public void setText(noNamespace.TextDocument.Text text)
+    public void setText(noNamespace.TextDocument.Text text)
     {
         generatedSetterHelperImpl(text, TEXT$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
@@ -129,7 +129,7 @@ public class TextDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComplex
         /**
          * Sets the "typeOfText" attribute
          */
-        @Inject(optional=true) public void setTypeOfText(noNamespace.TextDocument.Text.TypeOfText.Enum typeOfText)
+        public void setTypeOfText(noNamespace.TextDocument.Text.TypeOfText.Enum typeOfText)
         {
             synchronized (monitor())
             {

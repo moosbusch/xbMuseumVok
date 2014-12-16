@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.moosbusch.museum.inject.museumvok;
+package io.github.moosbusch.museum.inject.museumvok;
 
 import noNamespace.AltTermDocument;
 import noNamespace.AltTermDocument.AltTerm;
@@ -36,7 +36,7 @@ import noNamespace.RelationshipDocument.Relationship;
 import noNamespace.TextDocument;
 import noNamespace.TextDocument.Text;
 import org.apache.xmlbeans.impl.xb.xsdschema.NotationDocument;
-import org.moosbusch.museum.inject.MuseumXmlModule;
+import io.github.moosbusch.museum.inject.MuseumXmlModule;
 
 /**
  *

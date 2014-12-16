@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright 2013 Gunnar Kappei.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,8 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package noNamespace.impl;  import com.google.inject.Inject;
-import org.moosbusch.museum.inject.annotation.Language;
+package noNamespace.impl;
 
 /**
  * A document containing one altTerm(@) element.
@@ -55,7 +54,7 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
     /**
      * Sets the "altTerm" element
      */
-    @Inject(optional=true) public void setAltTerm(noNamespace.AltTermDocument.AltTerm altTerm)
+    public void setAltTerm(noNamespace.AltTermDocument.AltTerm altTerm)
     {
         generatedSetterHelperImpl(altTerm, ALTTERM$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
@@ -132,7 +131,7 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets the "altLabel" element
          */
-        @Inject(optional=true) public void setAltLabel(java.lang.String altLabel)
+        public void setAltLabel(java.lang.String altLabel)
         {
             synchronized (monitor())
             {
@@ -212,7 +211,7 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets the "typeOfLabel" element
          */
-        @Inject(optional=true) public void setTypeOfLabel(java.lang.String typeOfLabel)
+        public void setTypeOfLabel(java.lang.String typeOfLabel)
         {
             synchronized (monitor())
             {
@@ -304,7 +303,7 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets the "source" element
          */
-        @Inject(optional=true) public void setSource(java.lang.String source)
+        public void setSource(java.lang.String source)
         {
             synchronized (monitor())
             {
@@ -384,7 +383,7 @@ public class AltTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets the "lang" attribute
          */
-        @Inject(optional=true) public void setLang(@Language java.lang.String lang)
+        public void setLang(java.lang.String lang)
         {
             synchronized (monitor())
             {

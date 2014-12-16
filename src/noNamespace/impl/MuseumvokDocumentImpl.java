@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package noNamespace.impl;  import com.google.inject.Inject;
+package noNamespace.impl;  
 /**
  * A document containing one museumvok(@) element.
  *
@@ -53,7 +53,7 @@ public class MuseumvokDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCo
     /**
      * Sets the "museumvok" element
      */
-    @Inject(optional=true) public void setMuseumvok(noNamespace.MuseumvokDocument.Museumvok museumvok)
+    public void setMuseumvok(noNamespace.MuseumvokDocument.Museumvok museumvok)
     {
         generatedSetterHelperImpl(museumvok, MUSEUMVOK$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
@@ -184,7 +184,7 @@ public class MuseumvokDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCo
         /**
          * Sets array of all "Concept" element  WARNING: This method is not atomicaly synchronized.
          */
-        @Inject(optional=true) public void setConceptArray(noNamespace.ConceptDocument.Concept[] conceptArray)
+        public void setConceptArray(noNamespace.ConceptDocument.Concept[] conceptArray)
         {
             check_orphaned();
             arraySetterHelper(conceptArray, CONCEPT$0);
@@ -193,7 +193,7 @@ public class MuseumvokDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCo
         /**
          * Sets ith "Concept" element
          */
-        @Inject(optional=true) public void setConceptArray(int i, noNamespace.ConceptDocument.Concept concept)
+        public void setConceptArray(int i, noNamespace.ConceptDocument.Concept concept)
         {
             generatedSetterHelperImpl(concept, CONCEPT$0, i, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_ARRAYITEM);
         }

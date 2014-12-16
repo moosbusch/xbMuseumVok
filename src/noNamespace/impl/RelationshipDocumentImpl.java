@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package noNamespace.impl;  import com.google.inject.Inject;
+package noNamespace.impl;  
 /**
  * A document containing one relationship(@) element.
  *
@@ -53,7 +53,7 @@ public class RelationshipDocumentImpl extends org.apache.xmlbeans.impl.values.Xm
     /**
      * Sets the "relationship" element
      */
-    @Inject(optional=true) public void setRelationship(noNamespace.RelationshipDocument.Relationship relationship)
+    public void setRelationship(noNamespace.RelationshipDocument.Relationship relationship)
     {
         generatedSetterHelperImpl(relationship, RELATIONSHIP$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
@@ -126,7 +126,7 @@ public class RelationshipDocumentImpl extends org.apache.xmlbeans.impl.values.Xm
         /**
          * Sets the "related" element
          */
-        @Inject(optional=true) public void setRelated(java.lang.String related)
+        public void setRelated(java.lang.String related)
         {
             synchronized (monitor())
             {
@@ -206,7 +206,7 @@ public class RelationshipDocumentImpl extends org.apache.xmlbeans.impl.values.Xm
         /**
          * Sets the "typeOfRelationship" element
          */
-        @Inject(optional=true) public void setTypeOfRelationship(java.lang.String typeOfRelationship)
+        public void setTypeOfRelationship(java.lang.String typeOfRelationship)
         {
             synchronized (monitor())
             {

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.moosbusch.museum.document.museumvok.impl;
+package io.github.moosbusch.museum.document.museumvok.impl;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,8 +21,7 @@ import java.io.OutputStream;
 import noNamespace.MuseumvokDocument;
 import org.apache.xmlbeans.XmlException;
 import org.apache.xmlbeans.XmlOptions;
-import org.moosbusch.museum.document.museumvok.spi.AbstractMuseumVokXmlDocument;
-import org.moosbusch.museum.inject.museumvok.impl.DefaultMuseumVokObjectFactory;
+import io.github.moosbusch.museum.document.museumvok.spi.AbstractMuseumVokXmlDocument;
 
 /**
  *

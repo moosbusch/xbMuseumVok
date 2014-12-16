@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package noNamespace.impl;  import com.google.inject.Inject;
+package noNamespace.impl;  
 /**
  * A document containing one Concept(@) element.
  *
@@ -53,7 +53,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
     /**
      * Sets the "Concept" element
      */
-    @Inject(optional=true) public void setConcept(noNamespace.ConceptDocument.Concept concept)
+    public void setConcept(noNamespace.ConceptDocument.Concept concept)
     {
         generatedSetterHelperImpl(concept, CONCEPT$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
@@ -162,7 +162,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets the "about" element
          */
-        @Inject(optional=true) public void setAbout(java.lang.String about)
+        public void setAbout(java.lang.String about)
         {
             synchronized (monitor())
             {
@@ -290,7 +290,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets array of all "prefTerm" element  WARNING: This method is not atomicaly synchronized.
          */
-        @Inject(optional=true) public void setPrefTermArray(noNamespace.PrefTermDocument.PrefTerm[] prefTermArray)
+        public void setPrefTermArray(noNamespace.PrefTermDocument.PrefTerm[] prefTermArray)
         {
             check_orphaned();
             arraySetterHelper(prefTermArray, PREFTERM$2);
@@ -299,7 +299,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets ith "prefTerm" element
          */
-        @Inject(optional=true) public void setPrefTermArray(int i, noNamespace.PrefTermDocument.PrefTerm prefTerm)
+        public void setPrefTermArray(int i, noNamespace.PrefTermDocument.PrefTerm prefTerm)
         {
             generatedSetterHelperImpl(prefTerm, PREFTERM$2, i, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_ARRAYITEM);
         }
@@ -439,7 +439,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets array of all "altTerm" element  WARNING: This method is not atomicaly synchronized.
          */
-        @Inject(optional=true) public void setAltTermArray(noNamespace.AltTermDocument.AltTerm[] altTermArray)
+        public void setAltTermArray(noNamespace.AltTermDocument.AltTerm[] altTermArray)
         {
             check_orphaned();
             arraySetterHelper(altTermArray, ALTTERM$4);
@@ -448,7 +448,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets ith "altTerm" element
          */
-        @Inject(optional=true) public void setAltTermArray(int i, noNamespace.AltTermDocument.AltTerm altTerm)
+        public void setAltTermArray(int i, noNamespace.AltTermDocument.AltTerm altTerm)
         {
             generatedSetterHelperImpl(altTerm, ALTTERM$4, i, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_ARRAYITEM);
         }
@@ -669,7 +669,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets array of all "hiddenLabel" element
          */
-        @Inject(optional=true) public void setHiddenLabelArray(java.lang.String[] hiddenLabelArray)
+        public void setHiddenLabelArray(java.lang.String[] hiddenLabelArray)
         {
             synchronized (monitor())
             {
@@ -681,7 +681,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets ith "hiddenLabel" element
          */
-        @Inject(optional=true) public void setHiddenLabelArray(int i, java.lang.String hiddenLabel)
+        public void setHiddenLabelArray(int i, java.lang.String hiddenLabel)
         {
             synchronized (monitor())
             {
@@ -841,7 +841,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets the "notation" element
          */
-        @Inject(optional=true) public void setNotation(java.lang.String notation)
+        public void setNotation(java.lang.String notation)
         {
             synchronized (monitor())
             {
@@ -921,7 +921,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets the "inScheme" element
          */
-        @Inject(optional=true) public void setInScheme(java.lang.String inScheme)
+        public void setInScheme(java.lang.String inScheme)
         {
             synchronized (monitor())
             {
@@ -1130,7 +1130,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets array of all "memberOfCollection" element
          */
-        @Inject(optional=true) public void setMemberOfCollectionArray(java.lang.String[] memberOfCollectionArray)
+        public void setMemberOfCollectionArray(java.lang.String[] memberOfCollectionArray)
         {
             synchronized (monitor())
             {
@@ -1142,7 +1142,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets ith "memberOfCollection" element
          */
-        @Inject(optional=true) public void setMemberOfCollectionArray(int i, java.lang.String memberOfCollection)
+        public void setMemberOfCollectionArray(int i, java.lang.String memberOfCollection)
         {
             synchronized (monitor())
             {
@@ -1431,7 +1431,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets array of all "broader" element
          */
-        @Inject(optional=true) public void setBroaderArray(java.lang.String[] broaderArray)
+        public void setBroaderArray(java.lang.String[] broaderArray)
         {
             synchronized (monitor())
             {
@@ -1443,7 +1443,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets ith "broader" element
          */
-        @Inject(optional=true) public void setBroaderArray(int i, java.lang.String broader)
+        public void setBroaderArray(int i, java.lang.String broader)
         {
             synchronized (monitor())
             {
@@ -1732,7 +1732,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets array of all "narrower" element
          */
-        @Inject(optional=true) public void setNarrowerArray(java.lang.String[] narrowerArray)
+        public void setNarrowerArray(java.lang.String[] narrowerArray)
         {
             synchronized (monitor())
             {
@@ -1744,7 +1744,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets ith "narrower" element
          */
-        @Inject(optional=true) public void setNarrowerArray(int i, java.lang.String narrower)
+        public void setNarrowerArray(int i, java.lang.String narrower)
         {
             synchronized (monitor())
             {
@@ -1904,7 +1904,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets the "use" element
          */
-        @Inject(optional=true) public void setUse(java.lang.String use)
+        public void setUse(java.lang.String use)
         {
             synchronized (monitor())
             {
@@ -2125,7 +2125,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets array of all "useFor" element
          */
-        @Inject(optional=true) public void setUseForArray(java.lang.String[] useForArray)
+        public void setUseForArray(java.lang.String[] useForArray)
         {
             synchronized (monitor())
             {
@@ -2137,7 +2137,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets ith "useFor" element
          */
-        @Inject(optional=true) public void setUseForArray(int i, java.lang.String useFor)
+        public void setUseForArray(int i, java.lang.String useFor)
         {
             synchronized (monitor())
             {
@@ -2345,7 +2345,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets array of all "relationship" element  WARNING: This method is not atomicaly synchronized.
          */
-        @Inject(optional=true) public void setRelationshipArray(noNamespace.RelationshipDocument.Relationship[] relationshipArray)
+        public void setRelationshipArray(noNamespace.RelationshipDocument.Relationship[] relationshipArray)
         {
             check_orphaned();
             arraySetterHelper(relationshipArray, RELATIONSHIP$22);
@@ -2354,7 +2354,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets ith "relationship" element
          */
-        @Inject(optional=true) public void setRelationshipArray(int i, noNamespace.RelationshipDocument.Relationship relationship)
+        public void setRelationshipArray(int i, noNamespace.RelationshipDocument.Relationship relationship)
         {
             generatedSetterHelperImpl(relationship, RELATIONSHIP$22, i, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_ARRAYITEM);
         }
@@ -2494,7 +2494,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets array of all "equivRelationship" element  WARNING: This method is not atomicaly synchronized.
          */
-        @Inject(optional=true) public void setEquivRelationshipArray(noNamespace.EquivRelationshipDocument.EquivRelationship[] equivRelationshipArray)
+        public void setEquivRelationshipArray(noNamespace.EquivRelationshipDocument.EquivRelationship[] equivRelationshipArray)
         {
             check_orphaned();
             arraySetterHelper(equivRelationshipArray, EQUIVRELATIONSHIP$24);
@@ -2503,7 +2503,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets ith "equivRelationship" element
          */
-        @Inject(optional=true) public void setEquivRelationshipArray(int i, noNamespace.EquivRelationshipDocument.EquivRelationship equivRelationship)
+        public void setEquivRelationshipArray(int i, noNamespace.EquivRelationshipDocument.EquivRelationship equivRelationship)
         {
             generatedSetterHelperImpl(equivRelationship, EQUIVRELATIONSHIP$24, i, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_ARRAYITEM);
         }
@@ -2724,7 +2724,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets array of all "definition" element
          */
-        @Inject(optional=true) public void setDefinitionArray(java.lang.String[] definitionArray)
+        public void setDefinitionArray(java.lang.String[] definitionArray)
         {
             synchronized (monitor())
             {
@@ -2736,7 +2736,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets ith "definition" element
          */
-        @Inject(optional=true) public void setDefinitionArray(int i, java.lang.String definition)
+        public void setDefinitionArray(int i, java.lang.String definition)
         {
             synchronized (monitor())
             {
@@ -3025,7 +3025,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets array of all "depiction" element
          */
-        @Inject(optional=true) public void setDepictionArray(java.lang.String[] depictionArray)
+        public void setDepictionArray(java.lang.String[] depictionArray)
         {
             synchronized (monitor())
             {
@@ -3037,7 +3037,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets ith "depiction" element
          */
-        @Inject(optional=true) public void setDepictionArray(int i, java.lang.String depiction)
+        public void setDepictionArray(int i, java.lang.String depiction)
         {
             synchronized (monitor())
             {
@@ -3326,7 +3326,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets array of all "subjectIndicator" element
          */
-        @Inject(optional=true) public void setSubjectIndicatorArray(java.lang.String[] subjectIndicatorArray)
+        public void setSubjectIndicatorArray(java.lang.String[] subjectIndicatorArray)
         {
             synchronized (monitor())
             {
@@ -3338,7 +3338,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets ith "subjectIndicator" element
          */
-        @Inject(optional=true) public void setSubjectIndicatorArray(int i, java.lang.String subjectIndicator)
+        public void setSubjectIndicatorArray(int i, java.lang.String subjectIndicator)
         {
             synchronized (monitor())
             {
@@ -3546,7 +3546,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets array of all "note" element  WARNING: This method is not atomicaly synchronized.
          */
-        @Inject(optional=true) public void setNoteArray(noNamespace.NoteDocument.Note[] noteArray)
+        public void setNoteArray(noNamespace.NoteDocument.Note[] noteArray)
         {
             check_orphaned();
             arraySetterHelper(noteArray, NOTE$32);
@@ -3555,7 +3555,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets ith "note" element
          */
-        @Inject(optional=true) public void setNoteArray(int i, noNamespace.NoteDocument.Note note)
+        public void setNoteArray(int i, noNamespace.NoteDocument.Note note)
         {
             generatedSetterHelperImpl(note, NOTE$32, i, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_ARRAYITEM);
         }
@@ -3633,7 +3633,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets the "creation" element
          */
-        @Inject(optional=true) public void setCreation(noNamespace.CreationDocument.Creation creation)
+        public void setCreation(noNamespace.CreationDocument.Creation creation)
         {
             generatedSetterHelperImpl(creation, CREATION$34, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
         }
@@ -3711,7 +3711,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets the "status" element
          */
-        @Inject(optional=true) public void setStatus(java.lang.String status)
+        public void setStatus(java.lang.String status)
         {
             synchronized (monitor())
             {
@@ -3932,7 +3932,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets array of all "modified" element
          */
-        @Inject(optional=true) public void setModifiedArray(java.lang.String[] modifiedArray)
+        public void setModifiedArray(java.lang.String[] modifiedArray)
         {
             synchronized (monitor())
             {
@@ -3944,7 +3944,7 @@ public class ConceptDocumentImpl extends org.apache.xmlbeans.impl.values.XmlComp
         /**
          * Sets ith "modified" element
          */
-        @Inject(optional=true) public void setModifiedArray(int i, java.lang.String modified)
+        public void setModifiedArray(int i, java.lang.String modified)
         {
             synchronized (monitor())
             {

@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright 2013 Gunnar Kappei.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,23 +13,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.moosbusch.museum.document.museumvok;
+package io.github.moosbusch.museum.document.museumvok.impl;
 
-import noNamespace.ConceptDocument.Concept;
 import noNamespace.MuseumvokDocument;
-import noNamespace.MuseumvokDocument.Museumvok;
-import org.moosbusch.museum.document.MuseumXmlDocument;
-import org.moosbusch.museum.document.MuseumXmlDocument;
-import org.moosbusch.museum.inject.museumvok.impl.DefaultMuseumVokObjectFactory;
+import io.github.moosbusch.museum.document.spi.AbstractMuseumXmlObjectFactory;
+import io.github.moosbusch.museum.inject.museumvok.MuseumVokModule;
+import io.github.moosbusch.museum.inject.museumvok.impl.DefaultMuseumVokModule;
 
 /**
  *
  * @author moosbusch
  */
-public interface MuseumVokXmlDocument<T extends DefaultMuseumVokObjectFactory>
-    extends MuseumXmlDocument<MuseumvokDocument, T, Museumvok, Concept> {
+public class DefaultMuseumVokObjectFactory extends AbstractMuseumXmlObjectFactory
+        <MuseumVokModule, MuseumvokDocument> {
 
-    public static final String MUSEUMVOK_DOCTYPE_NAME = "museumvok";
-    public static final String MUSEUMVOK_DOCTYPE_SYSTEM_ID = "museumvok0.2.dtd";
+    @Override
+    protected MuseumVokModule createModule() {
+        return new DefaultMuseumVokModule();
+    }
 
+    @Override
+    public MuseumvokDocument createRootWrapperElement() {
+        return createTypedObject(MuseumvokDocument.class);
+    }
 }

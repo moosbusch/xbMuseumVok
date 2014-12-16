@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright 2013 Gunnar Kappei.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package noNamespace.impl;  import com.google.inject.Inject;
-import org.moosbusch.museum.inject.annotation.Language;
+package noNamespace.impl;
+
 /**
  * A document containing one prefTerm(@) element.
  *
@@ -54,7 +54,7 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
     /**
      * Sets the "prefTerm" element
      */
-    @Inject(optional=true) public void setPrefTerm(noNamespace.PrefTermDocument.PrefTerm prefTerm)
+    public void setPrefTerm(noNamespace.PrefTermDocument.PrefTerm prefTerm)
     {
         generatedSetterHelperImpl(prefTerm, PREFTERM$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
@@ -129,7 +129,7 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
         /**
          * Sets the "prefLabel" element
          */
-        @Inject(optional=true) public void setPrefLabel(java.lang.String prefLabel)
+        public void setPrefLabel(java.lang.String prefLabel)
         {
             synchronized (monitor())
             {
@@ -209,7 +209,7 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
         /**
          * Sets the "source" element
          */
-        @Inject(optional=true) public void setSource(java.lang.String source)
+        public void setSource(java.lang.String source)
         {
             synchronized (monitor())
             {
@@ -289,7 +289,7 @@ public class PrefTermDocumentImpl extends org.apache.xmlbeans.impl.values.XmlCom
         /**
          * Sets the "lang" attribute
          */
-        @Inject(optional=true) public void setLang(@Language java.lang.String lang)
+        public void setLang(java.lang.String lang)
         {
             synchronized (monitor())
             {

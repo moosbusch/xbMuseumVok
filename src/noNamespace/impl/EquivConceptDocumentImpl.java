@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package noNamespace.impl;  import com.google.inject.Inject;
+package noNamespace.impl;  
 /**
  * A document containing one equivConcept(@) element.
  *
@@ -53,7 +53,7 @@ public class EquivConceptDocumentImpl extends org.apache.xmlbeans.impl.values.Xm
     /**
      * Sets the "equivConcept" element
      */
-    @Inject(optional=true) public void setEquivConcept(noNamespace.EquivConceptDocument.EquivConcept equivConcept)
+    public void setEquivConcept(noNamespace.EquivConceptDocument.EquivConcept equivConcept)
     {
         generatedSetterHelperImpl(equivConcept, EQUIVCONCEPT$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
@@ -128,7 +128,7 @@ public class EquivConceptDocumentImpl extends org.apache.xmlbeans.impl.values.Xm
         /**
          * Sets the "equivID" element
          */
-        @Inject(optional=true) public void setEquivID(java.lang.String equivID)
+        public void setEquivID(java.lang.String equivID)
         {
             synchronized (monitor())
             {
@@ -196,7 +196,7 @@ public class EquivConceptDocumentImpl extends org.apache.xmlbeans.impl.values.Xm
         /**
          * Sets the "equivLabel" element
          */
-        @Inject(optional=true) public void setEquivLabel(java.lang.String equivLabel)
+        public void setEquivLabel(java.lang.String equivLabel)
         {
             synchronized (monitor())
             {
@@ -264,7 +264,7 @@ public class EquivConceptDocumentImpl extends org.apache.xmlbeans.impl.values.Xm
         /**
          * Sets the "equivSource" element
          */
-        @Inject(optional=true) public void setEquivSource(java.lang.String equivSource)
+        public void setEquivSource(java.lang.String equivSource)
         {
             synchronized (monitor())
             {

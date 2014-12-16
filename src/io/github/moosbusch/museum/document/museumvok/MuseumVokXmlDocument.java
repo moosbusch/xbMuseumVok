@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright 2013 Gunnar Kappei.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,26 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.moosbusch.museum.inject.museumvok.impl;
+package io.github.moosbusch.museum.document.museumvok;
 
+import noNamespace.ConceptDocument.Concept;
 import noNamespace.MuseumvokDocument;
-import org.moosbusch.museum.inject.spi.AbstractMuseumXmlObjectFactory;
-import org.moosbusch.museum.inject.museumvok.MuseumVokModule;
+import noNamespace.MuseumvokDocument.Museumvok;
+import io.github.moosbusch.museum.document.MuseumXmlDocument;
+import io.github.moosbusch.museum.document.museumvok.impl.DefaultMuseumVokObjectFactory;
 
 /**
  *
  * @author moosbusch
  */
-public class DefaultMuseumVokObjectFactory extends AbstractMuseumXmlObjectFactory
-        <MuseumVokModule, MuseumvokDocument> {
+public interface MuseumVokXmlDocument<T extends DefaultMuseumVokObjectFactory>
+    extends MuseumXmlDocument<MuseumvokDocument, T, Museumvok, Concept> {
 
-    @Override
-    protected MuseumVokModule createModule() {
-        return new DefaultMuseumVokModule();
-    }
+    public static final String MUSEUMVOK_DOCTYPE_NAME = "museumvok";
+    public static final String MUSEUMVOK_DOCTYPE_SYSTEM_ID = "museumvok0.2.dtd";
 
-    @Override
-    public MuseumvokDocument createRootWrapper() {
-        return createTypedObject(MuseumvokDocument.class);
-    }
 }
